@@ -1,12 +1,14 @@
-package io.account.steps;
+package stepDefinitions;
 
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import io.account.HttpContext;
+import context.HttpContext;
 import io.cucumber.java.en.*;
+import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import utilities.ConfigReader;
 
 public class AccountLoginStepDefinition {
     private static final String BASE_URI = "https://lms-hackathon-nov-2025-8dd40899c026.herokuapp.com/lms";
@@ -34,6 +36,14 @@ public class AccountLoginStepDefinition {
                 .body(body);
 
         context.setRequest(req);
+    }
+
+    // Background Steps
+    @Given("admin sets No Auth")
+    public void admin_sets_no_auth() {
+        // Write code here that turns the phrase above into concrete actions
+        var req = new RequestSpecBuilder().setBaseUri(ConfigReader.getBaseUrl()).setContentType(ContentType.JSON)
+                .build();
     }
 
     // --- GIVEN STEPS ---
