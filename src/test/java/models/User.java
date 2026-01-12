@@ -16,84 +16,109 @@ public class User {
 	private String userTimeZone;
 	private String userVisaStatus;
 	private UserLogin userLogin;
-	
-	public String getUserComments() {
+
+	// Getters and Setters
+	public String getuserComments() {
 		return userComments;
 	}
-	public void setUserComments(String userComments) {
+
+	public void setuserComments(String userComments) {
 		this.userComments = userComments;
 	}
-	public String getUserEduPg() {
+
+	public String getuserEduPg() {
 		return userEduPg;
 	}
-	public void setUserEduPg(String userEduPg) {
+
+	public void setuserEduPg(String userEduPg) {
 		this.userEduPg = userEduPg;
 	}
-	public String getUserEduUg() {
+
+	public String getuserEduUg() {
 		return userEduUg;
 	}
-	public void setUserEduUg(String userEduUg) {
+
+	public void setuserEduUg(String userEduUg) {
 		this.userEduUg = userEduUg;
 	}
-	public String getUserFirstName() {
+
+	public String getuserFirstName() {
 		return userFirstName;
 	}
-	public void setUserFirstName(String userFirstName) {
+
+	public void setuserFirstName(String userFirstName) {
 		this.userFirstName = userFirstName;
 	}
-	public String getUserLastName() {
+
+	public String getuserLastName() {
 		return userLastName;
 	}
-	public void setUserLastName(String userLastName) {
+
+	public void setuserLastName(String userLastName) {
 		this.userLastName = userLastName;
 	}
-	public String getUserLinkedinUrl() {
+
+	public String getuserLinkedinUrl() {
 		return userLinkedinUrl;
 	}
-	public void setUserLinkedinUrl(String userLinkedinUrl) {
+
+	public void setuserLinkedinUrl(String userLinkedinUrl) {
 		this.userLinkedinUrl = userLinkedinUrl;
 	}
-	public String getUserLocation() {
+
+	public String getuserLocation() {
 		return userLocation;
 	}
-	public void setUserLocation(String userLocation) {
+
+	public void setuserLocation(String userLocation) {
 		this.userLocation = userLocation;
 	}
-	public String getUserMiddleName() {
+
+	public String getuserMiddleName() {
 		return userMiddleName;
 	}
-	public void setUserMiddleName(String userMiddleName) {
+
+	public void setuserMiddleName(String userMiddleName) {
 		this.userMiddleName = userMiddleName;
 	}
-	public String getUserPhoneNumber() {
+
+	public String getuserPhoneNumber() {
 		return userPhoneNumber;
 	}
-	public void setUserPhoneNumber(String userPhoneNumber) {
+
+	public void setuserPhoneNumber(String userPhoneNumber) {
 		this.userPhoneNumber = userPhoneNumber;
 	}
-	public List<UserRoleMap> getUserRoleMaps() {
+
+	public List<UserRoleMap> getuserRoleMaps() {
 		return userRoleMaps;
 	}
-	public void setUserRoleMaps(List<UserRoleMap> userRoleMaps) {
+
+	public void setuserRoleMaps(List<UserRoleMap> userRoleMaps) {
 		this.userRoleMaps = userRoleMaps;
 	}
-	public String getUserTimeZone() {
+
+	public String getuserTimeZone() {
 		return userTimeZone;
 	}
-	public void setUserTimeZone(String userTimeZone) {
+
+	public void setuserTimeZone(String userTimeZone) {
 		this.userTimeZone = userTimeZone;
 	}
-	public String getUserVisaStatus() {
+
+	public String getuserVisaStatus() {
 		return userVisaStatus;
 	}
-	public void setUserVisaStatus(String userVisaStatus) {
+
+	public void setuserVisaStatus(String userVisaStatus) {
 		this.userVisaStatus = userVisaStatus;
 	}
-	public UserLogin getUserLogin() {
+
+	public UserLogin getuserLogin() {
 		return userLogin;
 	}
-	public void setUserLogin(UserLogin userLogin) {
+
+	public void setuserLogin(UserLogin userLogin) {
 		this.userLogin = userLogin;
 	}
-
 }
