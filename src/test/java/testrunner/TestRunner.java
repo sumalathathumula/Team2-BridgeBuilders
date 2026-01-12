@@ -6,7 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 			features = {"src/test/resources/features/"},
 
-			glue = {"stepDefinitions"},	
+			glue = {"stepDefinitions"},
+			tags = "",
 					//tags ="@login  or @User", 
 		 // tags ="@login  or @ProgramModule or @batch or @GetBatches or @GetBatchByBatchId or  @UpdateBatchByBatchId or @GetBatchByBatchName or ",
 			plugin = {"pretty",

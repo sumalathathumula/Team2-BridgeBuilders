@@ -2,12 +2,12 @@
 Feature: Admin Login Controller - Token Generation
 
   Background:
-    Given admin sets No Auth
+    Given Admin sets No Auth
 
   @Include
   Scenario: Check if admin able to generate token with valid credential
     Given  Admin creates request with valid credentials
-    When Admin calls Post Https method  with valid endpoint
+    When Admin calls Post Https method with valid endpoint
     Then Admin receives 200 created with auto generated token
 
   @Working
@@ -25,7 +25,7 @@ Feature: Admin Login Controller - Token Generation
   @Working
   Scenario: Check if admin able to generate token with invalid content type
     Given  Admin creates request with valid credentials
-    When Admin calls Post Https method  with invalid content type
+    When Admin calls Post Https method with invalid content type
     Then Admin receives 415
 
 
@@ -36,35 +36,36 @@ Feature: Admin Login Controller - Token Generation
 
   Scenario: Check if admin able to generate token with special characters in admin email
     Given Admin creates request with special characters in admin email
-    When Admin calls Post Https method  with valid endpoint
+    When Admin calls Post Https method with valid endpoint
     Then Admin receives 400
 
   Scenario: Check if admin able to generate token with special characters in password
     Given  Admin creates request with special characters in password
-    When Admin calls Post Https method  with valid endpoint
+    When Admin calls Post Https method with valid endpoint
     Then Admin receives 401
 
   Scenario: Check if admin able to generate token with number in email
     Given  Admin creates request with numbers in email
-    When Admin calls Post Https method  with valid endpoint
+    When Admin calls Post Https method with valid endpoint
     Then Admin receives 400
 
   Scenario: Check if admin able to generate token with numbers in password
     Given  Admin creates request with numbers in password
-    When Admin calls Post Https method  with valid endpoint
+    When Admin calls Post Https method with valid endpoint
     Then Admin receives 400
 
   Scenario: Check if admin able to generate token with Null password
     Given  Admin creates request with Null password
-    When Admin calls Post Https method  with valid endpoint
+    When Admin calls Post Https method with valid endpoint
     Then Admin receives 400
 
   Scenario: Check if admin able to generate token with Null Email
     Given  Admin creates request with Null email
-    When Admin calls Post Https method  with valid endpoint
+    When Admin calls Post Https method with valid endpoint
     Then Admin receives 400
 
   Scenario: Check if admin able to generate token with Null body
     Given  Admin creates request with Null body
-    When Admin calls Post Https method  with valid endpoint
+    When Admin calls Post Https method with valid endpoint
     Then Admin receives 400
+

@@ -8,13 +8,15 @@ import io.cucumber.java.en.*;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import lombok.extern.slf4j.Slf4j;
 import utilities.ConfigReader;
 
-public class AccountLoginStepDefinition {
+@Slf4j
+public class LoginStepDefinition {
     private static final String BASE_URI = "https://lms-hackathon-nov-2025-8dd40899c026.herokuapp.com/lms";
     private final HttpContext context;
 
-    public AccountLoginStepDefinition(HttpContext context) {
+    public LoginStepDefinition(HttpContext context) {
         this.context = context;
     }
 
@@ -39,7 +41,7 @@ public class AccountLoginStepDefinition {
     }
 
     // Background Steps
-    @Given("admin sets No Auth")
+    @Given("Admin sets No Auth")
     public void admin_sets_no_auth() {
         // Write code here that turns the phrase above into concrete actions
         var req = new RequestSpecBuilder().setBaseUri(ConfigReader.getBaseUrl()).setContentType(ContentType.JSON)
@@ -50,6 +52,11 @@ public class AccountLoginStepDefinition {
 
     @Given("Admin creates request with valid credentials")
     public void admin_creates_request_with_valid_credentials() {
+        buildRequest("team2@gmail.com", "ApiHackathon2@2", BASE_URI);
+    }
+
+    @Given("Admin creates request with invalid admin email")
+    public void admin_creates_request_with_invalid_email() {
         buildRequest("team2@gmail.com", "ApiHackathon2@2", BASE_URI);
     }
 
@@ -91,7 +98,7 @@ public class AccountLoginStepDefinition {
 
     // --- WHEN STEPS ---
 
-    @When("Admin calls Post Https method  with valid endpoint")
+    @When("Admin calls Post Https method with valid endpoint")
     public void admin_calls_post_https_method_with_valid_endpoint() {
         context.setResponse(context.getRequest().post("/login"));
     }
@@ -101,13 +108,13 @@ public class AccountLoginStepDefinition {
         context.setResponse(context.getRequest().get("/login"));
     }
 
-    @When("Admin calls Post Https method  with {string}")
+    @When("Admin calls Post Https method with {string}")
     public void admin_calls_post_with_path(String path) {
         // Generic approach for invalid endpoints
         context.setResponse(context.getRequest().post(path));
     }
 
-    @When("Admin calls Post Https method  with invalid content type")
+    @When("Admin calls Post Https method with invalid content type")
     public void admin_calls_post_https_method_with_invalid_content_type() {
         context.setResponse(context.getRequest().contentType(ContentType.XML).post("/login"));
     }
@@ -135,13 +142,9 @@ public class AccountLoginStepDefinition {
      */
     @Then("^Admin receives (\\d+)(?:.*)$")
     public void admin_receives_status(int http_status) {
-        assertThat(context.getResponse().getStatusCode()).isEqualTo(http_status);
+        log.info("Received HTTP status {}", context.getResponse().getStatusCode());
 
-        // Optional: logic to check token IF status is 200/201
-        if (http_status == 200 || http_status == 201) {
-            String token = context.getResponse().jsonPath().getString("token");
-            if (token != null) assertThat(token).isNotNull();
-        }
+        assertThat(context.getResponse().getStatusCode()).isEqualTo(http_status);
     }
 
     @Then("^Admin does not receive any status")

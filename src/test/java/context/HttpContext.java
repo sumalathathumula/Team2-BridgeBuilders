@@ -2,25 +2,13 @@ package context;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class HttpContext {
     private Response response;
 
     private RequestSpecification request;
-
-    public Response getResponse() {
-        return response;
-    }
-
-    public void setResponse(Response response) {
-        this.response = response;
-    }
-
-    public RequestSpecification getRequest() {
-        return request;
-    }
-
-    public void setRequest(RequestSpecification request) {
-        this.request = request;
-    }
 }

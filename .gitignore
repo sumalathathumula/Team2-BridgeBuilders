@@ -8,6 +8,7 @@ release.properties
 dependency-reduced-pom.xml
 build.log
 maven-shaded-log
+allure-results/
 
 # --- Compiled Java files ---
 *.class
