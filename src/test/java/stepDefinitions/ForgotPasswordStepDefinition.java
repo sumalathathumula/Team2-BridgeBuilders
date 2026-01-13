@@ -59,8 +59,14 @@ public class ForgotPasswordStepDefinition {
         context.setResponse(context.getRequest().post("/login/forgotpassword/confirmEmail"));
     }
 
-    @Then("^Admin receives for forgot-password (\\d+)(?:.*)$")
+    @Then("Admin receives {int} for forgot-password")
     public void admin_receives_status(int http_status) {
+        log.info("Received HTTP status {}", context.getResponse().getStatusCode());
+        assertThat(context.getResponse().getStatusCode()).isEqualTo(http_status);
+    }
+
+    @Then("Admin receives {int} created with auto generated token for forgot-password")
+    public void admin_receives_created_with_auto_generated_token_for_forgot_password(Integer http_status) {
         log.info("Received HTTP status {}", context.getResponse().getStatusCode());
         assertThat(context.getResponse().getStatusCode()).isEqualTo(http_status);
     }

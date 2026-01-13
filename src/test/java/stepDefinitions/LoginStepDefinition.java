@@ -140,8 +140,14 @@ public class LoginStepDefinition {
      * or "Admin receives 201 created with token"
      * Uses non-capturing group (?:.*) to ignore the descriptive text.
      */
-    @Then("^Admin receives (\\d+)(?:.*)$")
+    @Then("Admin receives {int} for Login")
     public void admin_receives_status(int http_status) {
+        log.info("Received HTTP status {}", context.getResponse().getStatusCode());
+        assertThat(context.getResponse().getStatusCode()).isEqualTo(http_status);
+    }
+
+    @Then("Admin receives {int} created with auto generated token")
+    public void admin_receives_created_with_auto_generated_token(Integer http_status) {
         log.info("Received HTTP status {}", context.getResponse().getStatusCode());
 
         assertThat(context.getResponse().getStatusCode()).isEqualTo(http_status);
