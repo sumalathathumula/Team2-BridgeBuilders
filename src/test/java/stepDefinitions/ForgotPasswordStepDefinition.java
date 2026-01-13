@@ -67,9 +67,7 @@ public class ForgotPasswordStepDefinition {
 
     @When("Admin calls Post Https method for forgot-password with invalid endpoint")
     public void admin_calls_post_https_method_for_forgot_password_with_invalid_endpoint() {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
-        // TODO
+        context.setResponse(context.getRequest().post("/login/forgotpassword/confirmEmails"));
     }
     @Then("Admin does not receive any status for forgot-password")
     public void admin_does_not_receive_any_status_for_forgot_password() {

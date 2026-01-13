@@ -103,7 +103,7 @@ public class LoginStepDefinition {
         context.setResponse(context.getRequest().post("/login"));
     }
 
-    @When("Admin call GET HTTPS method with post endpoint")
+    @When("Admin calls GET HTTPS method with post endpoint")
     public void admin_call_get_https_method_with_post_endpoint() {
         context.setResponse(context.getRequest().get("/login"));
     }
