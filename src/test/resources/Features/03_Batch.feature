@@ -14,3 +14,7 @@ Feature: Create Batch API
   Examples:
     | Scenario 			    														 |
   	| CreateBatchWithValidData											 |
+  	|CreateBatchWithValidDataFP												|
+  	|CreateBatchWithMissingAdditionalFields						|
+  	
+  	
