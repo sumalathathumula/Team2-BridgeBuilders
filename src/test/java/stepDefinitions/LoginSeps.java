@@ -25,7 +25,7 @@ import utilities.ResponseValidator;
 public class LoginSeps {
 
 //	 RequestSpecification req_Base;
-//	 Response response;
+	// Response response;
 	private final ScenarioContext context = ScenarioContext.getInstance();
 	private String endPoint;
 
@@ -48,7 +48,7 @@ public class LoginSeps {
 
 //	List<Map<String, String>> data =
 //            ExcelReader.getData(ConfigReader.getProperty("excelPath"), "Login");
-		// Temporary hardcoded path for testing
+		//Temporary hardcoded path for testing
 		String excelPath = System.getProperty("user.dir") + "/src/test/resources/Testdata.xlsx";
 
 		List<Map<String, String>> data = ExcelReader.getData(excelPath, "Login");
@@ -72,8 +72,8 @@ public class LoginSeps {
 
 	@Then("Admin receives {int} created with auto generated token")
 	public void admin_receives_created_with_auto_generated_token(Integer s) {
-//		response.then().statusCode(s);
-//		System.out.println("body: "+response.asString());
+		//response.then().statusCode(s);
+		//System.out.println("body: "+response.asString());
 		Response response = context.getResponse();
 		Map<String, String> row = context.getRowData();
 
@@ -86,6 +86,7 @@ public class LoginSeps {
 			String token = response.jsonPath().getString("token");
 			context.setToken(token);
 			LoggerLoad.info("TOKEN GENERATED: " + token);
+			System.out.println("token");
 		}
 	}
 
