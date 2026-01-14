@@ -5,9 +5,12 @@ public enum EndPoints {
     //Login end points
     USER_SIGN_IN("/login"),
     USER_LOGOUT("/logoutlms"),
+    USER_PASSWORD_RESET("resetPassword"),
 
     //Invalid Endpoint
     INVALID("/invalid"),
+
+
 
     //user end points
     CREATE_USER("/users/roleStatus");
