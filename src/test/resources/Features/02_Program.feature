@@ -25,7 +25,7 @@ Given Admin creates GET Request for the LMS API
 When Admin sends HTTPS Request with Valid Endpoint
 Then Admin receives 200 with OK message 
 
-@GETALLPROGRAM1
+@GETALLPROGRAMINVALID
 Scenario:
 Check if Admin able to retrieve all programs with InValid Endpoint
 Given Admin creates GET Request for LMS API

@@ -33,7 +33,7 @@ Feature: User Module
     | Scenario 			    														 |
   	| CreateUserWithInvalidEndpoint                  |
   	
-  	
+  	#GETALLUSERS
     Scenario: Check if admin able to retrieve all admin  with valid LMS API
     
     Given Admin creates GET Request for the LMS API endpoint 
@@ -44,5 +44,19 @@ Feature: User Module
 
     Given Admin creates GET Request with invalid endpoint for all users 
     When Admin sends HTTPS Request with  invalid endpoint for all users 
-    Then Admin receives 404 status with error message Not Found for get all users       
+    Then Admin receives 404 status with error message Not Found for get all users
+    
+    #GERBYUSERID
+    @getuserbyuserid
+    Scenario: Check if admin able to retrieve a admin with valid admin ID    
+    Given Admin creates GET Request for the LMS API endpoint with valid admin ID
+    When  Admin sends HTTPS Request with endpoint to getuserbyuserid  details
+    Then Admin receives 200 OK Status with response body for getuserbyuserid.  
+    
+     #GERUSERSBYROLEID 
+      @getusersbyroleid
+      Scenario: Check if admin able to retrieve a admin with valid role ID    
+    Given Admin creates GET Request for the LMS API endpoint with valid role ID
+    When  Admin sends HTTPS Request with endpoint to getusersbyroleid  details
+    Then Admin receives 200 OK Status with response body for getusersbyroleid.           
  

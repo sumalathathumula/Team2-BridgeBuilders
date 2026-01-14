@@ -20,8 +20,8 @@ public class ScenarioContext {
     private List<String> batchNames = new ArrayList<>();
 
 	private String userId;
-
 	private String role_id;
+	
 
     private ScenarioContext() {}
 
@@ -118,6 +118,7 @@ public class ScenarioContext {
     public String getRoleId() {
         return role_id;
     }
+   
 
     // CLEANUP 
 

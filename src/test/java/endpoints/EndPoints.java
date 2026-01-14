@@ -38,7 +38,7 @@ public enum EndPoints {
 	GET_ALL_ACTIVE_USERS("users/activeUsers"),
 	GET_EMAILS_OF_ALL_USERS_WITH_ACTIVE_STATUS("/fetch-emails"),
 	GET_ALL_ROLES("/roles"),
-	GET_USER_INFORMATION_BY_USERID("/users/user/{userId}"),
+	GET_USER_INFORMATION_BY_USERID("/users/{userId}"),
 	GET_USER_INFORMATION_BY_ID("/users/{id}"),	
 	GET_ALL_USERS_WITH_ROLES("/users/roles"),
 	GETS_COUNT_OF_ACTIVE_AND_INACTIVE_USERS("/users/byStatus"),	

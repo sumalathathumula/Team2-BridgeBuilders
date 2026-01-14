@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
   <suite started-at="2026-01-14T08:55:26 EST" name="Default suite" finished-at="2026-01-14T08:55:32 EST" duration-ms="6306">
+=======
+<testng-results ignored="0" total="13" passed="6" failed="7" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-13T23:16:08 GMT-05:00" name="Default suite" finished-at="2026-01-13T23:16:20 GMT-05:00" duration-ms="11826">
+>>>>>>> b2e5e6c9218e8ea91a9b632e85ffc89b87fc958e
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@13b6aecc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-01-14T08:55:26 EST" name="Default test" finished-at="2026-01-14T08:55:32 EST" duration-ms="6306">
       <class name="testrunner.TestRunner">
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@13b6aecc]" started-at="2026-01-14T08:55:26 EST" name="setUpClass" finished-at="2026-01-14T08:55:27 EST" duration-ms="758" status="PASS">
@@ -15,13 +23,26 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@615e7fe7]]>
+=======
+    <test started-at="2026-01-13T23:16:08 GMT-05:00" name="Default test" finished-at="2026-01-13T23:16:20 GMT-05:00" duration-ms="11826">
+      <class name="testrunner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:09 GMT-05:00" name="setUpClass" finished-at="2026-01-13T23:16:09 GMT-05:00" duration-ms="990" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@63e648a0]]>
+>>>>>>> b2e5e6c9218e8ea91a9b632e85ffc89b87fc958e
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@13b6aecc]" started-at="2026-01-14T08:55:27 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T08:55:32 EST" duration-ms="5345" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:10 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:16 GMT-05:00" duration-ms="6272" status="PASS">
+>>>>>>> b2e5e6c9218e8ea91a9b632e85ffc89b87fc958e
           <params>
             <param index="0">
               <value>
@@ -37,7 +58,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@13b6aecc]" started-at="2026-01-14T08:55:32 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T08:55:32 EST" duration-ms="114" status="FAIL">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:16 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:16 GMT-05:00" duration-ms="703" status="FAIL">
+>>>>>>> b2e5e6c9218e8ea91a9b632e85ffc89b87fc958e
           <params>
             <param index="0">
               <value>
@@ -50,8 +75,9 @@
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
+<<<<<<< HEAD
               <![CDATA[The step 'Admin creates GET Request for LMS API' and 2 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
@@ -126,13 +152,330 @@ at org.testng.TestNG.run(TestNG.java:1101)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+=======
+              <![CDATA[Index 1 out of bounds for length 1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at context.ScenarioContext.getBatchId(ScenarioContext.java:98)
+at stepDefinitions.BatchSteps.the_response_status_should_be_equal_to_expected_status_for_create_batch(BatchSteps.java:106)
+at ✽.the response status should be equal to ExpectedStatus for create batch(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/03_Batch.feature:11)
+>>>>>>> b2e5e6c9218e8ea91a9b632e85ffc89b87fc958e
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@13b6aecc]" started-at="2026-01-14T08:55:32 EST" name="tearDownClass" finished-at="2026-01-14T08:55:32 EST" duration-ms="46" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:17 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:17 GMT-05:00" duration-ms="590" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin able to create a Batch with valid endpoint and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create Batch API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:17 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:18 GMT-05:00" duration-ms="404" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin able to create a Batch with valid endpoint and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create Batch API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status code validation failed! expected [201] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [201] but found [404]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+at stepDefinitions.BatchSteps.the_response_status_should_be_equal_to_expected_status_for_create_batch(BatchSteps.java:90)
+at ✽.the response status should be equal to ExpectedStatus for create batch(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/03_Batch.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:18 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:18 GMT-05:00" duration-ms="724" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status code validation failed! expected [201] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
+at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:18 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:19 GMT-05:00" duration-ms="381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:19 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:19 GMT-05:00" duration-ms="340" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status code validation failed! expected [201] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
+at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:19 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:19 GMT-05:00" duration-ms="348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to create a user with valid endpoint and request body without authorization."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:19 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:20 GMT-05:00" duration-ms="303" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to create a user with invalid endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status code validation failed! expected [404] but found [405]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [404] but found [405]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
+at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:30)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:20 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:20 GMT-05:00" duration-ms="407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to retrieve all admin  with valid LMS API"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:20 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:20 GMT-05:00" duration-ms="184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to retrieve all batches with invalid Endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:20 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:20 GMT-05:00" duration-ms="18" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to retrieve a admin with valid admin ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[parameterValue cannot be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: parameterValue cannot be null
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+at io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy:515)
+at stepDefinitions.UserSteps.admin_creates_get_request_for_the_lms_api_endpoint_with_valid_admin_id(UserSteps.java:150)
+at ✽.Admin creates GET Request for the LMS API endpoint with valid admin ID(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:52)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:20 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T23:16:20 GMT-05:00" duration-ms="19" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to retrieve a admin with valid role ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[parameterValue cannot be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: parameterValue cannot be null
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy:515)
+at stepDefinitions.UserSteps.admin_creates_get_request_for_the_lms_api_endpoint_with_valid_role_id(UserSteps.java:179)
+at ✽.Admin creates GET Request for the LMS API endpoint with valid role ID(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:59)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T23:16:20 GMT-05:00" name="tearDownClass" finished-at="2026-01-13T23:16:20 GMT-05:00" duration-ms="33" status="PASS">
+>>>>>>> b2e5e6c9218e8ea91a9b632e85ffc89b87fc958e
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

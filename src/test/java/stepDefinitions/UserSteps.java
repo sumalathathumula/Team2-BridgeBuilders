@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import APIRequests.UserRequest;
 import context.ScenarioContext;
 import endpoints.EndPoints;
 import io.cucumber.java.en.*;
@@ -22,6 +23,7 @@ import utilities.ResponseValidator;
 public class UserSteps {
 	
 	private final ScenarioContext context = ScenarioContext.getInstance();
+	private final UserRequest userRequest = new UserRequest();
 	private String endPoint;
 	
 	@Given("Admin sets Authorization to Bearer Token to create user.")
@@ -33,72 +35,17 @@ public class UserSteps {
 	
 	@Given("Admin creates POST Request  with valid data in request body for create user")
 	public void admin_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-		endPoint = EndPoints.CREATE_USER.getEndpoint();
+		//endPoint = EndPoints.CREATE_USER.getEndpoint();
+		userRequest.prepareCreateUserRequest();
 		String token= context.getToken();
 		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
 	}
 
 	@When("Admin sends HTTPS Request with data from row {string} for create user")
-	public void admin_sends_https_request_with_data_from_row_for_create_user(String scenarioName) {
-		try {
-			List<Map<String, String>> userdata = ExcelReader.getData(ConfigReader.getProperty("excelPath"), "User");
-			for (Map<String, String> row : userdata) {
-				if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
-
-					User user = new User();
-					// Set simple fields
-			        user.setuserComments(row.get("userComments"));
-			        //user.setuserEduPg(row.get("userEduPg"));
-			        user.setuserEduUg(row.get("userEduUg"));
-			        user.setuserFirstName(row.get("userFirstName"));
-			        user.setuserLastName(row.get("userLastName"));
-			        user.setuserLinkedinUrl(row.get("userLinkedinUrl"));
-			        user.setuserLocation(row.get("userLocation"));
-			        user.setuserMiddleName(row.get("userMiddleName"));
-			        user.setuserPhoneNumber(row.get("userPhoneNumber"));
-			        user.setuserTimeZone(row.get("userTimeZone"));
-			        user.setuserVisaStatus(row.get("userVisaStatus"));
-			        
-			        // Set UserRoleMaps (assuming it can have multiple roles)
-			        List<UserRoleMap> userRoleMaps = new ArrayList<>();
-			        String[] roleIds = row.get("roleId").split(",");
-			        String[] roleStatuses = row.get("userRoleStatus").split(",");
-
-			        for (int i = 0; i < roleIds.length; i++) {
-			            UserRoleMap roleMap = new UserRoleMap();
-			            roleMap.setroleId(roleIds[i]);
-			            roleMap.setuserRoleStatus(roleStatuses[i]);
-			            userRoleMaps.add(roleMap);
-			        }
-			        user.setuserRoleMaps(userRoleMaps);
-
-			        // Set UserLogin
-			        UserLogin userLogin = new UserLogin();
-			        userLogin.setloginStatus(row.get("loginStatus"));
-			        userLogin.setuserLoginEmail(row.get("userLoginEmail"));
-			        user.setuserLogin(userLogin);
-
-//					Response response = request.given().contentType("application/json").body(user).log().body()
-//							.post(endPoint);
-					Response response = context.getRequest().body(user).when().post(endPoint);
-							
-
-					
-					context.setResponse(response);
-					context.setRowData(row);
-									
-
-					LoggerLoad.info("Status Code: " + response.getStatusCode());
-					if(response.getStatusCode() != 401 && response.getStatusCode() != 404) {
-						LoggerLoad.info("Status Message: " + response.jsonPath().getString("message"));
-					}
-
-					break;
-				}
-			}
-		} catch (Exception e) {
-			LoggerLoad.error(e.getMessage());
-		}
+	public void admin_sends_https_request_with_data_from_row_for_create_user(String scenarioName) throws Exception {
+		
+		userRequest.createUserFromExcelRow(scenarioName);
+		
 	}
 
 	@Then("the response status should be equal to ExpectedStatus for create user")
@@ -120,20 +67,25 @@ public class UserSteps {
 			context.setUserId(userID); // Setting userid for chaining
 			String roleID = response.jsonPath().getString("roles[0].roleId");	
 			context.setRoleId(roleID);
-		}		
+		}
+		System.out.println("Status for UserID:"+context.getUserId());
+		System.out.println("Status for UserID:"+context.getRoleId());
+		
 	    
 	}
 	
 	@Given("Admin sets Authorization to No Auth, creates POST Request with valid data in request body for create user")
 	public void admin_sets_authorization_to_no_auth_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-		endPoint = EndPoints.CREATE_USER.getEndpoint();
+		//endPoint = EndPoints.CREATE_USER.getEndpoint();
+		userRequest.prepareCreateUserRequest();
 		context.setRequest(given().spec(RequestSpecFactory.withoutAuth()));
 	    
 	}
 
 	@Given("Admin creates POST Request  with valid data in request body with invalid endpoint for create user")
 	public void admin_creates_post_request_with_valid_data_in_request_body_with_invalid_endpoint_for_create_user() {
-		endPoint = EndPoints.CREATE_USER.getEndpoint()+"1";
+		//endPoint = EndPoints.CREATE_USER.getEndpoint()+"1";
+		userRequest.prepareCreateUserRequestForInvalidEndpoint();
 		String token= context.getToken();
 		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));	
 	   
@@ -182,4 +134,65 @@ public class UserSteps {
 		LoggerLoad.info("actStatusCode : "+actStatusCode);
 		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
 	}
+	//----get user by user id ---
+	
+	@Given("Admin creates GET Request for the LMS API endpoint with valid admin ID")
+	public void admin_creates_get_request_for_the_lms_api_endpoint_with_valid_admin_id() {
+		endPoint = EndPoints.GET_USER_INFORMATION_BY_USERID.getEndpoint();
+		String token= context.getToken();
+		//context.setRequest(given().pathParam("userId", context.getUserId()).spec(RequestSpecFactory.withAuth(token)));
+		context.setRequest(
+			    given()
+			        .filter((req, res, ctx) -> {
+			            System.out.println("Final Request URI: " + req.getURI());
+			            return ctx.next(req, res);
+			        })
+			        .pathParam("userId", context.getUserId())
+			        .spec(RequestSpecFactory.withAuth(token))
+			);
+	}
+
+	@When("Admin sends HTTPS Request with endpoint to getuserbyuserid  details")
+	public void admin_sends_https_request_with_endpoint_to_getuserbyuserid_details() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);	
+		
+	}
+
+	@Then("Admin receives {int} OK Status with response body for getuserbyuserid.")
+	public void admin_receives_ok_status_with_response_body_for_getuserbyuserid(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+	//...get users by role id
+	@Given("Admin creates GET Request for the LMS API endpoint with valid role ID")
+	public void admin_creates_get_request_for_the_lms_api_endpoint_with_valid_role_id() {
+		endPoint = EndPoints.GETS_USERS_BY_ROLEID.getEndpoint();
+		String token= context.getToken();		
+		context.setRequest(
+			    given()
+			        .filter((req, res, ctx) -> {
+			            System.out.println("Final Request URI: " + req.getURI());
+			            return ctx.next(req, res);
+			        })
+			        .pathParam("roleId", context.getRoleId())
+			        .spec(RequestSpecFactory.withAuth(token))
+			);
+	}
+
+	@When("Admin sends HTTPS Request with endpoint to getusersbyroleid  details")
+	public void admin_sends_https_request_with_endpoint_to_getusersbyroleid_details() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+
+	@Then("Admin receives {int} OK Status with response body for getusersbyroleid.")
+	public void admin_receives_ok_status_with_response_body_for_getusersbyroleid(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+	
+
 }
