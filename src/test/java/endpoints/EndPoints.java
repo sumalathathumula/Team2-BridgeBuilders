@@ -5,11 +5,13 @@ public enum EndPoints {
 	//Login end points
 		USER_SIGN_IN("/login"),
 		
-<<<<<<< HEAD
+
 		//Program end points 
 		CREATE_PROGRAM("/saveprogram"),
 		
 		GET_ALL_PROGRAMS("/allPrograms"),
+		
+		GET_ALL_PROGRAMS_INVALID("/allprogram"),
 		
 		GET_PROGRAM_BYPROGRAMID("/programs/{programId}"),
 		
@@ -22,10 +24,10 @@ public enum EndPoints {
 		DELETE_PROGRAM_BYPROGRAMID("/deletebyprogid/{programId}"),
 		
 		DELETE_PROGRAM_BYPROGRAMNAME("/deletebyprogname/{programName}"),
-=======
+
 		//Batch end points
 		CREATE_BATCH("/batches"),
->>>>>>> 6c14d122ad7caf931780365d18318291e875eed7
+
 		
 		//user end points
 		CREATE_USER("/users/roleStatus"),

@@ -1,38 +1,37 @@
 Feature:Program Module API 
 
-Background: Admin creates Program Id for LMS with valid authorization
+Background: 
+Given Admin has valid authorization to create Program Id
 
 @POST
 Scenario Outline:
 Check if Admin able to create a program with different scenarios
 Given Admin creates POST Request with different scenario
-When Admin sends HTTPS Request "<scenario>" with endpoint
+When Admin sends HTTPS Request "<Scenario>" with endpoint
 Then Admin receives status code with response body
 
 Examples:
-|	scenario					|
-|	Valid request body			|
-|	Invalid authorization		|
-|	Invalid endpoint			|
-|	Invalid	request body		|
-|	Missing	request body		|
+|Scenario					|
+|Valid request body			|
+|Invalid request body		|
+|Missing request body		|
 
 
-				
 
-#@GETALLPROGRAM
-#Scenario Outline:
-#Check if Admin able to retrieve all programs with different scenario
-#Given Admin creates GET Request with "<Auth>" for the LMS API
-#When Admin sends HTTPS Request with "<scenario>"
-#Then Admin receives "<status code>" with "<status message>" 
+@GETALLPROGRAM
+Scenario:
+Check if Admin able to retrieve all programs with Valid Endpoint
+Given Admin creates GET Request for the LMS API
+When Admin sends HTTPS Request with Valid Endpoint
+Then Admin receives 200 with OK message 
 
-#Examples:
-#|Auth  	| scenario  			|	status code		|	status message		|
-#|Valid  |Valid Endpoint 		|	200				|	OK					|
-#|Valid	|Invalid Endpoint		|	404				|	Not found			|
-#|Valid	|Invalid Method			|	405				|	Method Not Allowed	|
-#|Invalid|Valid Endpoint		 	| 	401				|	Unauthorized		|
+@GETALLPROGRAM1
+Scenario:
+Check if Admin able to retrieve all programs with InValid Endpoint
+Given Admin creates GET Request for LMS API
+When Admin sends HTTPS Request with InValid Endpoint
+Then Admin receives 404 with Not found message 
+
 
 #@GETPROGRAMBYPROGRAMID
 #Scenario Outline:

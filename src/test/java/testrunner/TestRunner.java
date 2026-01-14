@@ -4,10 +4,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-			features = {"src/test/resources/Features/02_Program.feature"}, 
+			features = {"src/test/resources/Features"}, 
 
-			glue = {"stepDefinitions","hooks"},	
-			//tags ="@POsT", 
+			glue = {"stepDefinitions"},	
+			tags ="@positive or @GETALLPROGRAM1", 
 		 // tags ="@login  or @ProgramModule or @batch or @GetBatches or @GetBatchByBatchId or  @UpdateBatchByBatchId or @GetBatchByBatchName or ",
 			plugin = {"pretty", "html:target/Team1_LMSReport.html","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 
@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 		)
 	
 
-	public class TestRunner  {
+	public class TestRunner extends AbstractTestNGCucumberTests {
 		
 	  
 	}

@@ -1,36 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-13T15:48:32 EST" name="Default suite" finished-at="2026-01-13T15:48:32 EST" duration-ms="20">
-    <groups>
-    </groups>
-    <test started-at="2026-01-13T15:48:32 EST" name="Default test" finished-at="2026-01-13T15:48:32 EST" duration-ms="20">
-=======
-<testng-results ignored="0" total="9" passed="0" failed="9" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2026-01-13T15:27:11 GMT-05:00" name="Default suite" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="1633">
+  <suite started-at="2026-01-14T08:55:26 EST" name="Default suite" finished-at="2026-01-14T08:55:32 EST" duration-ms="6306">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@13b6aecc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-13T15:27:11 GMT-05:00" name="Default test" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="1633">
+    <test started-at="2026-01-14T08:55:26 EST" name="Default test" finished-at="2026-01-14T08:55:32 EST" duration-ms="6306">
       <class name="testrunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:11 GMT-05:00" name="setUpClass" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="967" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@13b6aecc]" started-at="2026-01-14T08:55:26 EST" name="setUpClass" finished-at="2026-01-14T08:55:27 EST" duration-ms="758" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@348d18a3]]>
+                <![CDATA[org.testng.TestRunner@615e7fe7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="232" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@13b6aecc]" started-at="2026-01-14T08:55:27 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T08:55:32 EST" duration-ms="5345" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,161 +34,60 @@
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'admin sets No Auth' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("admin sets No Auth")
-public void admin_sets_no_auth() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates request with valid credentials")
-public void admin_creates_request_with_valid_credentials() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin calls Post HTTPS method with valid endpoint with data from row {string}")
-public void admin_calls_post_https_method_with_valid_endpoint_with_data_from_row(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("Admin receives {int} created with auto generated token")
-public void admin_receives_created_with_auto_generated_token(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'admin sets No Auth' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("admin sets No Auth")
-public void admin_sets_no_auth() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates request with valid credentials")
-public void admin_creates_request_with_valid_credentials() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin calls Post HTTPS method with valid endpoint with data from row {string}")
-public void admin_calls_post_https_method_with_valid_endpoint_with_data_from_row(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("Admin receives {int} created with auto generated token")
-public void admin_receives_created_with_auto_generated_token(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="34" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@13b6aecc]" started-at="2026-01-14T08:55:32 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T08:55:32 EST" duration-ms="114" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin able to create a Batch with valid endpoint and request body"]]>
+                <![CDATA[""]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Create Batch API"]]>
+                <![CDATA["Program Module API"]]>
               </value>
             </param>
           </params>
           <exception class="io.cucumber.testng.UndefinedStepException">
             <message>
-              <![CDATA[The step 'Admin sets Authorization to Bearer Token.' and 3 other step(s) are undefined.
+              <![CDATA[The step 'Admin creates GET Request for LMS API' and 2 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given("Admin sets Authorization to Bearer Token.")
-public void admin_sets_authorization_to_bearer_token() {
+@Given("Admin creates GET Request for LMS API")
+public void admin_creates_get_request_for_lms_api() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Given("Admin creates POST Request with valid data in request body for create batch")
-public void admin_creates_post_request_with_valid_data_in_request_body_for_create_batch() {
+@When("Admin sends HTTPS Request with InValid Endpoint")
+public void admin_sends_https_request_with_in_valid_endpoint() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When("Admin sends HTTPS Request with data from row {string} for create batch")
-public void admin_sends_https_request_with_data_from_row_for_create_batch(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create batch")
-public void the_response_status_should_be_equal_to_expected_status_for_create_batch() {
+@Then("Admin receives {int} with Not found message")
+public void admin_receives_with_not_found_message(Integer int1) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
 ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin sets Authorization to Bearer Token.' and 3 other step(s) are undefined.
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin creates GET Request for LMS API' and 2 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given("Admin sets Authorization to Bearer Token.")
-public void admin_sets_authorization_to_bearer_token() {
+@Given("Admin creates GET Request for LMS API")
+public void admin_creates_get_request_for_lms_api() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Given("Admin creates POST Request with valid data in request body for create batch")
-public void admin_creates_post_request_with_valid_data_in_request_body_for_create_batch() {
+@When("Admin sends HTTPS Request with InValid Endpoint")
+public void admin_sends_https_request_with_in_valid_endpoint() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When("Admin sends HTTPS Request with data from row {string} for create batch")
-public void admin_sends_https_request_with_data_from_row_for_create_batch(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create batch")
-public void the_response_status_should_be_equal_to_expected_status_for_create_batch() {
+@Then("Admin receives {int} with Not found message")
+public void admin_receives_with_not_found_message(Integer int1) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -210,10 +100,8 @@ at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(Rethrow
 at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
 at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
 at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
@@ -222,7 +110,7 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:819)
 at org.testng.TestRunner.run(TestRunner.java:619)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -244,761 +132,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="46" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates POST Request  with valid data in request body for create user")
-public void admin_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates POST Request  with valid data in request body for create user")
-public void admin_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="66" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates POST Request  with valid data in request body for create user")
-public void admin_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates POST Request  with valid data in request body for create user")
-public void admin_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="24" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates POST Request  with valid data in request body for create user")
-public void admin_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates POST Request  with valid data in request body for create user")
-public void admin_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="14" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to create a user with valid endpoint and request body without authorization."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin sets Authorization to No Auth, creates POST Request with valid data in request body for create user")
-public void admin_sets_authorization_to_no_auth_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin sets Authorization to No Auth, creates POST Request with valid data in request body for create user")
-public void admin_sets_authorization_to_no_auth_creates_post_request_with_valid_data_in_request_body_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="20" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to create a user with invalid endpoint"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates POST Request  with valid data in request body with invalid endpoint for create user")
-public void admin_creates_post_request_with_valid_data_in_request_body_with_invalid_endpoint_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates POST Request  with valid data in request body with invalid endpoint for create user")
-public void admin_creates_post_request_with_valid_data_in_request_body_with_invalid_endpoint_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with data from row {string} for create user")
-public void admin_sends_https_request_with_data_from_row_for_create_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("the response status should be equal to ExpectedStatus for create user")
-public void the_response_status_should_be_equal_to_expected_status_for_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="38" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to retrieve all admin  with valid LMS API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates GET Request for the LMS API endpoint")
-public void admin_creates_get_request_for_the_lms_api_endpoint() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with endpoint for get all users")
-public void admin_sends_https_request_with_endpoint_for_get_all_users() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("Admin receives {int} OK Status with response body for get all users.")
-public void admin_receives_ok_status_with_response_body_for_get_all_users(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates GET Request for the LMS API endpoint")
-public void admin_creates_get_request_for_the_lms_api_endpoint() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with endpoint for get all users")
-public void admin_sends_https_request_with_endpoint_for_get_all_users() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("Admin receives {int} OK Status with response body for get all users.")
-public void admin_receives_ok_status_with_response_body_for_get_all_users(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="20" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to retrieve all batches with invalid Endpoint"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates GET Request with invalid endpoint for all users")
-public void admin_creates_get_request_with_invalid_endpoint_for_all_users() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with  invalid endpoint for all users")
-public void admin_sends_https_request_with_invalid_endpoint_for_all_users() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("Admin receives {int} status with error message Not Found for get all users")
-public void admin_receives_status_with_error_message_not_found_for_get_all_users(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin sets Authorization to Bearer Token to create user.' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("Admin sets Authorization to Bearer Token to create user.")
-public void admin_sets_authorization_to_bearer_token_to_create_user() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("Admin creates GET Request with invalid endpoint for all users")
-public void admin_creates_get_request_with_invalid_endpoint_for_all_users() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("Admin sends HTTPS Request with  invalid endpoint for all users")
-public void admin_sends_https_request_with_invalid_endpoint_for_all_users() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("Admin receives {int} status with error message Not Found for get all users")
-public void admin_receives_status_with_error_message_not_found_for_get_all_users(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-13T15:27:12 GMT-05:00" name="tearDownClass" finished-at="2026-01-13T15:27:12 GMT-05:00" duration-ms="52" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@13b6aecc]" started-at="2026-01-14T08:55:32 EST" name="tearDownClass" finished-at="2026-01-14T08:55:32 EST" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- testrunner.TestRunner -->
->>>>>>> 6c14d122ad7caf931780365d18318291e875eed7
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -72,13 +72,7 @@ public class LoginSeps {
 
 	@Then("Admin receives {int} created with auto generated token")
 	public void admin_receives_created_with_auto_generated_token(Integer s) {
-<<<<<<< HEAD
-		//response.then().statusCode(s);
-		//System.out.println("body: "+response.asString());
-=======
-//		response.then().statusCode(s);
-		
->>>>>>> 6c14d122ad7caf931780365d18318291e875eed7
+
 		Response response = context.getResponse();
 		System.out.println("body: "+response.asString());
 		Map<String, String> row = context.getRowData();
