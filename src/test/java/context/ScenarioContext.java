@@ -15,9 +15,13 @@ public class ScenarioContext {
     private Map<String, String> rowData;
 
     private List<Integer> programIds = new ArrayList<>();
-    private List<Integer> batchIds = new ArrayList<>();
-    private List<Integer> classIds = new ArrayList<>();
+    private List<Integer> batchIds = new ArrayList<>();   
     private List<String> programNames = new ArrayList<>();
+    private List<String> batchNames = new ArrayList<>();
+
+	private String userId;
+
+	private String role_id;
 
     private ScenarioContext() {}
 
@@ -93,7 +97,27 @@ public class ScenarioContext {
     public int getBatchId(int index) {
         return batchIds.get(index);
     }
+    public void addBatchName(String name) {
+        batchNames.add(name);
+    }
+    public String getBatchName(int index) {
+    	return batchNames.get(index);
+    }
     
+
+    public  void setUserId(String userId) {
+    	this.userId = userId;
+		
+	}
+    public  void setRoleId(String role_id) {
+    	this.role_id = role_id;
+	}
+    public String getUserId() {
+        return userId;
+    }
+    public String getRoleId() {
+        return role_id;
+    }
 
     // CLEANUP 
 
@@ -105,7 +129,6 @@ public class ScenarioContext {
 
         programIds.clear();
         programNames.clear();
-        batchIds.clear();
-        classIds.clear();
+        batchIds.clear();        
     }
 }

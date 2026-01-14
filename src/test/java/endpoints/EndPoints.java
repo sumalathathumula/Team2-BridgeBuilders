@@ -5,6 +5,7 @@ public enum EndPoints {
 	//Login end points
 		USER_SIGN_IN("/login"),
 		
+<<<<<<< HEAD
 		//Program end points 
 		CREATE_PROGRAM("/saveprogram"),
 		
@@ -21,9 +22,36 @@ public enum EndPoints {
 		DELETE_PROGRAM_BYPROGRAMID("/deletebyprogid/{programId}"),
 		
 		DELETE_PROGRAM_BYPROGRAMNAME("/deletebyprogname/{programName}"),
+=======
+		//Batch end points
+		CREATE_BATCH("/batches"),
+>>>>>>> 6c14d122ad7caf931780365d18318291e875eed7
 		
 		//user end points
-		CREATE_USER("/users/roleStatus");
+		CREATE_USER("/users/roleStatus"),
+	
+	
+	GET_ALL_USERS("/users"),
+	GET_ALL_USERS_WITH_FACETS("/v2/users"),
+	GET_ALL_ACTIVE_USERS("users/activeUsers"),
+	GET_EMAILS_OF_ALL_USERS_WITH_ACTIVE_STATUS("/fetch-emails"),
+	GET_ALL_ROLES("/roles"),
+	GET_USER_INFORMATION_BY_USERID("/users/user/{userId}"),
+	GET_USER_INFORMATION_BY_ID("/users/{id}"),	
+	GET_ALL_USERS_WITH_ROLES("/users/roles"),
+	GETS_COUNT_OF_ACTIVE_AND_INACTIVE_USERS("/users/byStatus"),	
+    GETS_USERS_FOR_PROGRAM("/users/programs/{programId}"),
+    GETS_USERS_FOR_PROGRAM_BATCHES("/users/programBatch/{batchId}"),
+    GETS_USER_DETAILS_BY_ID("/users/details/{id}"),
+    GETS_USERS_BY_ROLEID("/users/roles/{roleId}"),
+    GETS_USERS_BY_ROLEID_V2("/v2/users"),
+    
+    UPDATE_USER("/users/{userId}"),    
+	UPDATE_USER_ROLEID("/users/roleId/{userID}"),
+    UPDATE_USER_ROLE_PROGRAM_BATCH_STATUS("/users/roleProgramBatchStatus/{userId}"),
+    UPDATE_USER_LOGIN_STATUS("/users/userLogin/{userId}"),
+    
+    DELETE_USER("/users/{userID}");
 	
 	
 	

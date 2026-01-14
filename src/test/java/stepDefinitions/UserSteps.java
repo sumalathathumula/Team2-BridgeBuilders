@@ -107,15 +107,79 @@ public class UserSteps {
 		Map<String, String> row = context.getRowData();
 
 		int expectedStatus = Integer.parseInt(row.get("ExpectedStatusCode"));
+		int actStatusCode= response.getStatusCode();
 
 		ResponseValidator.validateStatusCode(response.getStatusCode(), expectedStatus);
 		//ResponseValidator.validateContentType(response.getContentType(), row.get("ContentType"));
 		System.out.println("Status for User:"+response.getStatusCode());
 		System.out.println("Status for User:"+response.getStatusLine());
+		System.out.println("body: "+response.asString());
+		
+		if (expectedStatus == 201 && actStatusCode == 201) {
+			String userID = response.jsonPath().getString("user.userId");
+			context.setUserId(userID); // Setting userid for chaining
+			String roleID = response.jsonPath().getString("roles[0].roleId");	
+			context.setRoleId(roleID);
+		}		
+	    
+	}
+	
+	@Given("Admin sets Authorization to No Auth, creates POST Request with valid data in request body for create user")
+	public void admin_sets_authorization_to_no_auth_creates_post_request_with_valid_data_in_request_body_for_create_user() {
+		endPoint = EndPoints.CREATE_USER.getEndpoint();
+		context.setRequest(given().spec(RequestSpecFactory.withoutAuth()));
 	    
 	}
 
+	@Given("Admin creates POST Request  with valid data in request body with invalid endpoint for create user")
+	public void admin_creates_post_request_with_valid_data_in_request_body_with_invalid_endpoint_for_create_user() {
+		endPoint = EndPoints.CREATE_USER.getEndpoint()+"1";
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));	
+	   
+	}
+	//*************GET ALL USERS*************//
 	
+	@Given("Admin creates GET Request for the LMS API endpoint")
+	public void admin_creates_get_request_for_the_lms_api_endpoint() {
+		endPoint = EndPoints.GET_ALL_USERS.getEndpoint();
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	    
+	}
 
+	@When("Admin sends HTTPS Request with endpoint for get all users")
+	public void admin_sends_https_request_with_endpoint_for_get_all_users() {
+		
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
 
+	@Then("Admin receives {int} OK Status with response body for get all users.")
+	public void admin_receives_ok_status_with_response_body_for_get_all_users(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+	
+	// sending get all users request with invalid end point
+	@Given("Admin creates GET Request with invalid endpoint for all users")
+	public void admin_creates_get_request_with_invalid_endpoint_for_all_users() {
+		endPoint = EndPoints.GET_ALL_USERS.getEndpoint()+"1";
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+
+	@When("Admin sends HTTPS Request with  invalid endpoint for all users")
+	public void admin_sends_https_request_with_invalid_endpoint_for_all_users() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+
+	@Then("Admin receives {int} status with error message Not Found for get all users")
+	public void admin_receives_status_with_error_message_not_found_for_get_all_users(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
 }
