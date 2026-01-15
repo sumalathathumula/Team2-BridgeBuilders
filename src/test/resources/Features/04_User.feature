@@ -11,11 +11,42 @@ Feature: User Module
 
   Examples:
     | Scenario 			    														 |
-  	| CreateUserWithValidDataR01										 |	
-  	|	CreateUserWithExistingPhoneNumber							 |
+  	| CreateUserWithValidDataR01										 |
+  	|CreateUserWithValidDataR02												|
+  	|CreateUserWithValidDataR03												|
+  	|	CreateUserWithExistingPhoneNumber							  |
   	|CreateUserWithMandatoryFieldsValidData						|
+  	|CreateUserWithInvaliduserFirstName								|
+  	|CreateUserWithInvaliduserLastName 								|
+  	|CreateUserWithInvaliduserLocation								|
+  	|CreateUserWithInvaliduserPhoneNumber							|
+  	|CreateUserWithInvaliduserRoleStatus							|
+  	|CreateUserWithInvaliduserTimeZone								|
+  	|CreateUserWithInvaliduserVisaStatus 							|
+  	|CreateUserWithInvaliduserLoginEmail							|
+  	|CreateUserWithSpecialCharacterInuserLoginEmail		|
+  	|CreateUserWithSpecialCharacterInuserVisaStatus		|
+  	|CreateUserWithSpecialCharacterInuserTimeZone			|
+  	|CreateUserWithSpecialCharacterInuserRoleStatus	  |
+  	|CreateUserWithSpecialCharacterInroleId						|
+  	|CreateUserWithSpecialCharacterInuserPhoneNumber 	|
+  	|CreateUserWithSpecialCharacterInuserMiddleName		|
+  	|CreateUserWithSpecialCharacterInuserVisaStatus		|
+  	|CreateUserWithSpecialCharacterInuserLocation			|
+  	|CreateUserWithSpecialCharacterInuserLinkedinUrl 	|
+  	|CreateUserWithSpecialCharacterInuserLastName 		|
+  	|CreateUserWithSpecialCharacterInuserFirstName		|
+  	|CreateUserWithSpecialCharacterWithNumericloginStatus|
+  	|CreateUserWithEmptyuserFirstName								|
+  	|CreateUserWithEmptyuserLastName								|
+  	|CreateUserWithEmptyuserLoginEmail							|
+  	|CreateUserWithEmptyuserPhoneNumber							|
+  	|CreateUserWithNoAuth														|
+  	|CreateUserWithInvalidEndpoint									|
   	
-  	#NOAUTH
+  	    	
+  	
+  	  	#NOAUTH
   	Scenario Outline: Check if admin able to create a user with valid endpoint and request body without authorization.
     Given Admin sets Authorization to No Auth, creates POST Request with valid data in request body for create user
     When Admin sends HTTPS Request with data from row "<Scenario>" for create user
@@ -59,6 +90,36 @@ Feature: User Module
     Given Admin creates GET Request for the LMS API endpoint with valid role ID
     When  Admin sends HTTPS Request with endpoint to getusersbyroleid  details
     Then Admin receives 200 OK Status with response body for getusersbyroleid. 
+    
+    #PUTREQUEST(Assign admin to Program / Batch by admin ID)
+    @UPDATE_USERROLE_PROGRAM_BATCH_STATUS
+    Scenario Outline: Admin able to assign admin to program or batch using PUT API
+    Given Admin creates PUT Request with valid LMS endpoint to assign admin
+    When Admin sends HTTPS Request with data from row "<Scenario>" for assign admin
+    Then the response status should be equal to ExpectedStatus for assign admin
+
+    Examples:
+      | Scenario                                                           |
+      | AssignAdminToProgramBatchWithValidData                            |
+      | AssignAdminToProgramBatchWithInvalidAdminId                        |
+      | AssignAdminToProgramBatchWithMissingMandatoryField                 |
+      
+     #PUTREQUEST(Update admin role status by admin ID)
+     @UPDATE_USER_ROLEID 
+    Scenario Outline: Admin able to update admin role status using PUT API    
+    Given Admin creates PUT Request with valid LMS endpoint to update admin role status
+    When Admin sends HTTPS Request with data from row "<Scenario>" for update admin role status
+    Then the response status should be equal to ExpectedStatus for update admin role status
+
+    Examples:
+      | Scenario                                                  |
+      | UpdateAdminRoleStatusWithValidAdminId                     |
+      | UpdateAdminRoleStatusWithInvalidAdminId                   |
+      | UpdateAdminRoleStatusWithMissingMandatoryField            |
+      
+      
+      
+      
     
               
  

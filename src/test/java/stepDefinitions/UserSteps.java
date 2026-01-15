@@ -193,6 +193,62 @@ public class UserSteps {
 		LoggerLoad.info("actStatusCode : "+actStatusCode);
 		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
 	}
+	//UPDATE_USERROLE_PROGRAM_BATCH_STATUS
+	@Given("Admin creates PUT Request with valid LMS endpoint to assign admin")
+	public void admin_creates_put_request_with_valid_lms_endpoint_to_assign_admin() {
+		userRequest.prepareAssignAdminRequest();
+
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	    
+	}
+
+	@When("Admin sends HTTPS Request with data from row {string} for assign admin")
+	public void admin_sends_https_request_with_data_from_row_for_assign_admin(String scenario) throws Exception {
+		userRequest.assignAdminFromExcelRow(scenario);
+	}
+
+	@Then("the response status should be equal to ExpectedStatus for assign admin")
+	public void the_response_status_should_be_equal_to_expected_status_for_assign_admin() {
+		Response response = context.getResponse();
+		Map<String, String> row = context.getRowData();
+
+		int expectedStatus = Integer.parseInt(row.get("ExpectedStatusCode"));
+		int actStatusCode= response.getStatusCode();
+
+		ResponseValidator.validateStatusCode(response.getStatusCode(), expectedStatus);
+		//ResponseValidator.validateContentType(response.getContentType(), row.get("ContentType"));
+		System.out.println("Status for User:"+response.getStatusCode());
+		System.out.println("Status for User:"+response.getStatusLine());
+		System.out.println("body: "+response.asString());		
+		
+	}
+	
+	//UPDATE_USER_ROLEID
+	@Given("Admin creates PUT Request with valid LMS endpoint to update admin role status")
+	public void admin_creates_put_request_with_valid_lms_endpoint_to_update_admin_role_status() {
+		userRequest.prepareUpdateAdminRoleStatusRequest();
+	}
+
+	@When("Admin sends HTTPS Request with data from row {string} for update admin role status")
+	public void admin_sends_https_request_with_data_from_row_for_update_admin_role_status(String scenario) throws Exception {
+		userRequest.updateAdminRoleStatusFromExcelRow(scenario);
+	}
+
+	@Then("the response status should be equal to ExpectedStatus for update admin role status")
+	public void the_response_status_should_be_equal_to_expected_status_for_update_admin_role_status() {
+		Response response = context.getResponse();
+		Map<String, String> row = context.getRowData();
+
+		int expectedStatus = Integer.parseInt(row.get("ExpectedStatusCode"));
+		int actStatusCode= response.getStatusCode();
+
+		ResponseValidator.validateStatusCode(response.getStatusCode(), expectedStatus);
+		//ResponseValidator.validateContentType(response.getContentType(), row.get("ContentType"));
+		System.out.println("Status for User:"+response.getStatusCode());
+		System.out.println("Status for User:"+response.getStatusLine());
+		System.out.println("body: "+response.asString());
+	}
 	
 
 }

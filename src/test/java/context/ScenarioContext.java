@@ -84,16 +84,16 @@ public class ScenarioContext {
     // BATCH
     
     public void addBatch(String key, int id, String name) {
-        programIds.put(key, id);
-        programNames.put(key, name);
+        batchIds.put(key, id);
+        batchNames.put(key, name);
     }
 
     public int getBatchId(String key) {
-        return programIds.get(key);
+        return batchIds.get(key);
     }
 
     public String getBatchName(String key) {
-        return programNames.get(key);
+        return batchNames.get(key);
     } 
     
     public  void setUserId(String userId) {

@@ -8,6 +8,7 @@ import models.UserLogin;
 import models.UserRoleMap;
 import utilities.ConfigReader;
 import utilities.ExcelReader;
+import utilities.LoggerLoad;
 
 public class UserRequest {
 
@@ -21,6 +22,10 @@ public class UserRequest {
     public void prepareCreateUserRequestForInvalidEndpoint() {
         endpoint = EndPoints.CREATE_USER.getEndpoint()+"1";
     }
+ // Prepare Request
+    public void prepareUpdateAdminRoleStatusRequest() {
+   	    endpoint = EndPoints.UPDATE_USER_ROLEID.getEndpoint();
+   	}
     
     //Read Excel and Build User POJO  
        
@@ -95,6 +100,188 @@ public class UserRequest {
                 break;
             }
         }
-    }
+    }   
+    
+//Prepare Request
+ public void prepareAssignAdminRequest() {
+     endpoint = EndPoints.UPDATE_USER_ROLE_PROGRAM_BATCH_STATUS.getEndpoint();
+ }
+
+ public void prepareAssignAdminRequestForInvalidEndpoint() {
+     endpoint = EndPoints.UPDATE_USER_ROLE_PROGRAM_BATCH_STATUS.getEndpoint() + "1";
+ }
+
+ //Build Payload
+
+ private Map<String, Object> buildAssignAdminPayload(
+         Map<String, String> row,
+         String scenarioName) {
+
+     Map<String, Object> payload = new HashMap<>();
+
+     // userId
+     if (scenarioName.equalsIgnoreCase("AssignAdminToProgramBatchWithInvalidAdminId")) {
+         payload.put("userId", row.get("userId"));
+     } else {
+         payload.put("userId", context.getUserId());
+     }
+
+     // roleId
+     payload.put("roleId", context.getRoleId());
+
+     // programId
+     if (scenarioName.equalsIgnoreCase("AssignAdminToProgramBatchWithDeletedProgramId")) {
+         payload.put("programId", context.getProgramId("DELETE_BY_ID"));
+     } else {
+         payload.put("programId", context.getProgramId("BATCH"));
+     }
+
+     // batch mapping (mandatory unless missing-field scenario)
+     if (!scenarioName.equalsIgnoreCase("AssignAdminToProgramBatchWithMissingMandatoryField")) {
+
+         Map<String, Object> batchMap = new HashMap<>();
+
+         if (scenarioName.equalsIgnoreCase("AssignAdminToProgramBatchWithInvalidBatchId")) {
+             batchMap.put("batchId", 0);
+         } else {
+             batchMap.put("batchId", context.getBatchId("USER"));
+         }
+
+         batchMap.put(
+                 "userRoleProgramBatchStatus",
+                 row.get("userRoleProgramBatchStatus")
+         );
+
+         payload.put(
+                 "userRoleProgramBatches",
+                 List.of(batchMap)
+         );
+     }
+
+     return payload;
+ }
+
+ //PUT Assign Admin API
+
+ public void assignAdminFromExcelRow(String scenarioName) throws Exception {
+
+	 List<Map<String, String>> rows =
+		        ExcelReader.getData(ConfigReader.getProperty("excelPath"), "User");
+
+		for (Map<String, String> row : rows) {
+
+		    if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
+
+		        Map<String, Object> payload =
+		                buildAssignAdminPayload(row, scenarioName);
+
+		        String userId;
+
+		        if (scenarioName.contains("InvalidAdminId")) {
+		            userId = "U999999";
+		        } else if (scenarioName.contains("MissingMandatoryField")) {
+		            userId = null;
+		        } else {
+		            userId = context.getUserId();
+		        }
+
+		        Response response;
+
+		        if (userId != null) {
+		            response = context.getRequest()
+		                    .pathParam("userId", userId)
+		                    .body(payload)
+		                    .put(endpoint);
+		        } else {
+		            response = context.getRequest()
+		                    .body(payload)
+		                    .put(endpoint.replace("/{userId}", ""));
+		        }
+
+		        context.setResponse(response);
+		        context.setRowData(row);
+
+		        LoggerLoad.info("Status Code: " + response.getStatusCode());
+		        LoggerLoad.info("Response Body: " + response.asPrettyString());
+
+		        if (response.getStatusCode() != 401 && response.getStatusCode() != 404) {
+		            LoggerLoad.info("Status Message: " +
+		                    response.jsonPath().getString("message"));
+		        }
+
+		        break;
+		    }
+		}
+ }
+ 
+ 
+ 
+ private Map<String, Object> buildUpdateAdminRolePayload(
+	        Map<String, String> row,
+	        String scenarioName) {
+
+	    Map<String, Object> payload = new HashMap<>();
+	    List<Map<String, Object>> userRoleList = new ArrayList<>();
+
+	    Map<String, Object> roleMap = new HashMap<>();
+
+	    // Missing mandatory field scenario
+	    if (scenarioName.contains("MissingMandatoryField")) {
+
+	        // Intentionally skip roleId or roleStatus
+	        roleMap.put("roleId", row.get("roleId"));
+	        // userRoleStatus missing
+
+	    } else {
+
+	        roleMap.put("roleId", row.get("roleId"));
+	        roleMap.put("userRoleStatus", row.get("userRoleStatus"));
+	    }
+
+	    userRoleList.add(roleMap);
+	    payload.put("userRoleList", userRoleList);
+
+	    return payload;
+	}
+ public void updateAdminRoleStatusFromExcelRow(String scenarioName) throws Exception {
+
+	    List<Map<String, String>> rows =
+	            ExcelReader.getData(ConfigReader.getProperty("excelPath"), "User");
+
+	    for (Map<String, String> row : rows) {
+
+	        if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
+
+	            context.setRowData(row);
+
+	            Map<String, Object> payload =
+	                    buildUpdateAdminRolePayload(row, scenarioName);
+
+	            String userId;
+
+	            // Invalid Admin ID
+	            if (scenarioName.contains("InvalidAdminId")) {
+	                userId = "U0000";   // non-existing
+	            } else {
+	                userId = context.getUserId(); // valid
+	            }
+
+	            Response response = context.getRequest()
+	                    .pathParam("userID", userId)
+	                    .body(payload)
+	                    .log().body()
+	                    .put(endpoint);
+
+	            context.setResponse(response);
+
+	            LoggerLoad.info("Status Code: " + response.getStatusCode());
+	            LoggerLoad.info("Response Body: " + response.asPrettyString());
+
+	            break;
+	        }
+	    }
+	}
+
+ 
 
 }
