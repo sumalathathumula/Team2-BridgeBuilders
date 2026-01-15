@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.given;
 import java.util.List;
 import java.util.Map;
 
+import APIRequests.ProgramRequest;
 import context.ScenarioContext;
 import endpoints.EndPoints;
 import io.cucumber.java.en.Given;
@@ -27,51 +28,25 @@ public class Programsteps {
 	private final ScenarioContext context = ScenarioContext.getInstance();
 	private String endPoint;
 	
+	private final ProgramRequest pgm = new ProgramRequest();
+	
 
 	@Given("Admin has valid authorization to create Program Id")
 	public void admin_has_valid_authorization_to_create_program_id() {
-		endPoint = EndPoints.CREATE_PROGRAM.getEndpoint();
+		pgm.CreateProgramRequest();
 	}
 	
 	@Given("Admin creates POST Request with different scenario")
 	public void admin_creates_post_request_with_different_scenario() {
-		endPoint = EndPoints.CREATE_PROGRAM.getEndpoint();
+		pgm.CreateProgramRequest();
 		String token = context.getToken();
 		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
 		
 	}
 
 	@When("Admin sends HTTPS Request {string} with endpoint")
-	public void admin_sends_https_request_with_endpoint(String scenarioName) {
-		try {
-			List<Map<String, String>> programdata = ExcelReader.getData(ConfigReader.getProperty("excelPath"), "Program");
-			for (Map<String, String> row : programdata) {
-				if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
-					
-					Program pgm = new Program();
-					
-					pgm.setprogramDescription(row.get("programDescription"));
-					pgm.setprogramName(row.get("programName"));
-					pgm.setprogramStatus(row.get("programStatus"));
-					
-					Response response = context.getRequest().body(pgm).when().post(endPoint);
-					
-					context.setResponse(response);
-					context.setRowData(row);
-					
-					LoggerLoad.info("Status Code: " + response.getStatusCode());
-					if(response.getStatusCode() != 401 && response.getStatusCode() != 404) {
-						LoggerLoad.info("Status Message: " + response.jsonPath().getString("message"));
-					}
-					break;
-				}
-					
-			}
-
-		} catch (Exception e) {
-			LoggerLoad.error(e.getMessage());
-		}
-		
+	public void admin_sends_https_request_with_endpoint(String scenarioName) throws Exception {
+		pgm.CreateProgramfromExcel(scenarioName);
 		
 	}
 
@@ -82,7 +57,7 @@ public class Programsteps {
 		
 		int expectedStatus = Integer.parseInt(row.get("ExpectedStatusCode"));
 		int actStatusCode= response.getStatusCode();
-
+		
 		ResponseValidator.validateStatusCode(response.getStatusCode(), expectedStatus);
 		//ResponseValidator.validateContentType(response.getContentType(), row.get("ContentType"));
 		System.out.println("Status for User:"+response.getStatusCode());
@@ -91,7 +66,7 @@ public class Programsteps {
 			
 
 	}
-	
+	//GETALLPROGRAMS
 	@Given("Admin creates GET Request for the LMS API")
 	public void admin_creates_get_request_for_the_lms_api() {
 		endPoint = EndPoints.GET_ALL_PROGRAMS.getEndpoint();
@@ -109,10 +84,10 @@ public class Programsteps {
 		LoggerLoad.info("actStatusCode : "+actStatusCode);
 		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
 	}
-
+//GETALLPROGRAMS-Negative
 	@Given("Admin creates GET Request for LMS API")
 	public void admin_creates_get_request_for_lms_api() {
-	    endPoint = EndPoints.GET_ALL_PROGRAMS_INVALID.getEndpoint();
+		endPoint = EndPoints.GET_ALL_PROGRAMS.getEndpoint()+"1";
 	    String token= context.getToken();
 		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
 	    
@@ -127,6 +102,29 @@ public class Programsteps {
 		int actStatusCode = context.getResponse().getStatusCode();
 		LoggerLoad.info("actStatusCode : "+actStatusCode);
 		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+	//GETPROGRAMBYPROGRAMID
+	@Given("Admin creates GET Request with  valid programId for the LMS API")
+	public void admin_creates_get_request_with_valid_program_id_for_the_lms_api() {
+	   endPoint = EndPoints.GET_PROGRAM_BYPROGRAMID.getEndpoint();
+	   String token = context.getToken();
+	   //int programId = testContext.getProgramId(0);
+
+	   // Response response = ProgramRequest.getProgramById(programId);
+	   context.setRequest(
+			    given()
+			        .filter((req, res, ctx) -> {
+			            System.out.println("Final Request URI: " + req.getURI());
+			            return ctx.next(req, res);
+			        })
+			        .pathParam("programId", 16)
+			        .spec(RequestSpecFactory.withAuth(token))
+			);
+	}
+	@When("Admin sends HTTPS Request with with valid endpoint")
+	public void admin_sends_https_request_with_with_valid_endpoint() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
 	}
 	
 }

@@ -193,6 +193,161 @@ public class UserSteps {
 		LoggerLoad.info("actStatusCode : "+actStatusCode);
 		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
 	}
-	
+	//get all users
+	@Given("Admin creates GET Request for LMS API endpoint with valid admin ID")
+	public void admin_creates_get_request_for_lms_api_endpoint_with_valid_admin_id() {
+		endPoint = EndPoints.GET_ALL_USERS.getEndpoint();
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+	@When("Admin sends HTTPS Request with endpoint to get all users")
+	public void admin_sends_https_request_with_endpoint_to_get_all_users() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+	@Then("Admin receives {int} OK Status with response body for all users.")
+	public void admin_receives_ok_status_with_response_body_for_all_users(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
 
+//get all users - negative
+	@Given("Admin creates GET Request with invalid endpoint for all user")
+	public void admin_creates_get_request_with_invalid_endpoint_for_all_user() {
+		endPoint = EndPoints.GET_ALL_USERS.getEndpoint()+"w";
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+	@When("Admin sends HTTPS Request with  invalid endpoint for all user")
+	public void admin_sends_https_request_with_invalid_endpoint_for_all_user() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+	@Then("Admin receives {int} status with error message Not Found for get all user")
+	public void admin_receives_status_with_error_message_not_found_for_get_all_user(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+
+
+//get all active users
+	@Given("Admin creates GET Request for API endpoint with valid admin ID")
+	public void admin_creates_get_request_for_api_endpoint_with_valid_admin_id() {
+		endPoint = EndPoints.GET_ALL_ACTIVE_USERS.getEndpoint();
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+	@When("Admin sends HTTPS Request with endpoint to get all active users")
+	public void admin_sends_https_request_with_endpoint_to_get_all_active_users() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+	@Then("Admin receives {int} OK Status with response for all active users.")
+	public void admin_receives_ok_status_with_response_for_all_active_users(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+
+//get all active users-negative	
+
+	@Given("Admin creates GET Request with invalid endpoint for all active users")
+	public void admin_creates_get_request_with_invalid_endpoint_for_all_active_users() {
+		endPoint = EndPoints.GET_ALL_ACTIVE_USERS.getEndpoint()+"ghv";
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+	@When("Admin sends HTTPS Request with  invalid endpoint for all active users")
+	public void admin_sends_https_request_with_invalid_endpoint_for_all_active_users() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+	@Then("Admin receives {int} status with message Not Found for get all active users")
+	public void admin_receives_status_with_message_not_found_for_get_all_active_users(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+
+
+//@Getemailsofalluserswithactivestatus
+	@Given("Admin creates GET Request for the LMS API with valid admin ID")
+	public void admin_creates_get_request_for_the_lms_api_with_valid_admin_id() {
+		endPoint = EndPoints.GET_EMAILS_OF_ALL_USERS_WITH_ACTIVE_STATUS.getEndpoint();
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+	@When("Admin sends HTTPS Request with endpoint to get email of all active users")
+	public void admin_sends_https_request_with_endpoint_to_get_email_of_all_active_users() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+	@Then("Admin receives {int} OK Status with response body for all active users.")
+	public void admin_receives_ok_status_with_response_body_for_all_active_users(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+
+
+	//@Getemailsofalluserswithactivestatus-negative
+	@Given("Admin creates GET Request with invalid endpoint to fetch email of all active users")
+	public void admin_creates_get_request_with_invalid_endpoint_to_fetch_email_of_all_active_users() {
+		endPoint = EndPoints.GET_EMAILS_OF_ALL_USERS_WITH_ACTIVE_STATUS.getEndpoint()+"hvbj";
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+	@When("Admin sends HTTPS Request to fetch email with  invalid endpoint for all active users")
+	public void admin_sends_https_request_to_fetch_email_with_invalid_endpoint_for_all_active_users() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+	@Then("Admin receives {int} status with error message Not Found for get all active users")
+	public void admin_receives_status_with_error_message_not_found_for_get_all_active_users(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+
+
+//get all roles
+	@Given("Admin creates GET Request to get all roles API endpoint with valid admin ID")
+	public void admin_creates_get_request_to_get_all_roles_api_endpoint_with_valid_admin_id() {
+		endPoint = EndPoints.GET_ALL_ROLES.getEndpoint();
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+	@When("Admin sends HTTPS Request with endpoint to get all roles")
+	public void admin_sends_https_request_with_endpoint_to_get_all_roles() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+	@Then("Admin receives {int} OK Status with response body for all roles.")
+	public void admin_receives_ok_status_with_response_body_for_all_roles(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
+
+
+//get all roles negative
+	@Given("Admin creates GET Request with invalid endpoint")
+	public void admin_creates_get_request_with_invalid_endpoint() {
+		endPoint = EndPoints.GET_ALL_ROLES.getEndpoint()+"hgv";
+		String token= context.getToken();
+		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
+	}
+	@When("Admin sends HTTPS Request with  invalid endpoint for all roles")
+	public void admin_sends_https_request_with_invalid_endpoint_for_all_roles() {
+		Response response = context.getRequest().when().get(endPoint);
+		context.setResponse(response);
+	}
+	@Then("Admin receives {int} status with error message Not Found for get all user roles")
+	public void admin_receives_status_with_error_message_not_found_for_get_all_user_roles(Integer expStatusCode) {
+		int actStatusCode = context.getResponse().getStatusCode();
+		LoggerLoad.info("actStatusCode : "+actStatusCode);
+		ResponseValidator.validateStatusCode(actStatusCode, expStatusCode);
+	}
 }

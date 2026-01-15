@@ -7,7 +7,8 @@ import io.cucumber.testng.CucumberOptions;
 			features = {"src/test/resources/Features"}, 
 
 			glue = {"stepDefinitions"},	
-			tags ="@positive or @GETALLPROGRAM1", 
+			tags = "@positive or @@Getallroles1",
+			//tags ="@positive or @POST or @GETPROGRAMBYPROGRAMID", 
 		 // tags ="@login  or @ProgramModule or @batch or @GetBatches or @GetBatchByBatchId or  @UpdateBatchByBatchId or @GetBatchByBatchName or ",
 			plugin = {"pretty", "html:target/Team1_LMSReport.html","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 

@@ -33,16 +33,16 @@ When Admin sends HTTPS Request with InValid Endpoint
 Then Admin receives 404 with Not found message 
 
 
-#@GETPROGRAMBYPROGRAMID
-#Scenario Outline:
-#Check if Admin able to retrieve all programs by programId
-#Given Admin creates GET Request with "<programId>" using "<Auth>" for the LMS API
-#When Admin sends HTTPS Request with "<Scenario>"
-#Then Admin receives "<status code>" with "<status message>" 
+@GETPROGRAMBYPROGRAMID
+Scenario:
+Check if Admin able to retrieve all programs by programId
+Given Admin creates GET Request with  valid programId for the LMS API
+When Admin sends HTTPS Request with with valid endpoint
+Then Admin receives 200 with OK message 
 
 #Examples:
 #|programId		|	Auth  	|	Scenario			|	status code		|	status message		|
-#|Valid			|	Valid  	|	Valid Endpoint		|	200				|	OK					|
+
 #|Invalid		|	Valid	|	Valid Endpoint		|	404				|	Not Found			|
 #|Valid			|	Valid	|	Inavlid baseUR		|	404				|	Not Found			|
 #|Valid			|	Invalid	|	Valid Endpoint		| 	401				|	Unauthorized		|

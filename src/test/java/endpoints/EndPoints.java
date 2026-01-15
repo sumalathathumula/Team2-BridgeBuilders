@@ -11,8 +11,6 @@ public enum EndPoints {
 		
 		GET_ALL_PROGRAMS("/allPrograms"),
 		
-		GET_ALL_PROGRAMS_INVALID("/allprogram"),
-		
 		GET_PROGRAM_BYPROGRAMID("/programs/{programId}"),
 		
 		GET_ALLPROGRAMS_WITHUSERS("/allProgramsWithUsers"),

@@ -21,6 +21,7 @@ public class ScenarioContext {
 
 	private String userId;
 	private String role_id;
+	private String programId;
 	
 
     private ScenarioContext() {}
@@ -112,13 +113,21 @@ public class ScenarioContext {
     public  void setRoleId(String role_id) {
     	this.role_id = role_id;
 	}
+    
+    public void setProgramId(String program_Id) {
+    	this.programId = program_Id;
+    }
     public String getUserId() {
         return userId;
     }
     public String getRoleId() {
         return role_id;
     }
+    
+ 
    
+    
+    
 
     // CLEANUP 
 
