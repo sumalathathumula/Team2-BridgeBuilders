@@ -24,15 +24,13 @@ import utilities.ResponseValidator;
 
 public class LoginSeps {
 
-//	 RequestSpecification req_Base;
-//	 Response response;
+
 	private final ScenarioContext context = ScenarioContext.getInstance();
 	private String endPoint;
 
 	@Given("admin sets No Auth")
 	public void admin_sets_no_auth() {
-		endPoint = EndPoints.USER_SIGN_IN.getEndpoint();
-		//context.setRequest(RequestSpecFactory.withoutAuth());
+		endPoint = EndPoints.USER_SIGN_IN.getEndpoint();		
 	}
 
 	@Given("Admin creates request with valid credentials")
@@ -46,13 +44,8 @@ public class LoginSeps {
 	public void admin_calls_post_https_method_with_valid_endpoint_with_data_from_row(String scenarioName)
 			throws InvalidFormatException, IOException {
 
-//	List<Map<String, String>> data =
-//            ExcelReader.getData(ConfigReader.getProperty("excelPath"), "Login");
-		// Temporary hardcoded path for testing
 		String excelPath = System.getProperty("user.dir") + "/src/test/resources/Testdata.xlsx";
-
 		List<Map<String, String>> data = ExcelReader.getData(excelPath, "Login");
-
 		for (Map<String, String> row : data) {
 			if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
 
@@ -71,8 +64,7 @@ public class LoginSeps {
 	}
 
 	@Then("Admin receives {int} created with auto generated token")
-	public void admin_receives_created_with_auto_generated_token(Integer s) {
-//		response.then().statusCode(s);
+	public void admin_receives_created_with_auto_generated_token(Integer s) {		
 		
 		Response response = context.getResponse();
 		System.out.println("body: "+response.asString());

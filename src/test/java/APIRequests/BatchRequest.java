@@ -17,24 +17,20 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 public class BatchRequest {
 	
-	//private final ScenarioContext context = ScenarioContext.getInstance();
+	
 	private final ScenarioContext context;
 
     public BatchRequest() {
         this.context = ScenarioContext.getInstance();
     }
- // set end point
-    public void setCreateBatchEndpoint() {
-         EndPoints.CREATE_BATCH.getEndpoint();
-    }
+    
     private String endpoint;
     
     // PrepareRequest
     public void prepareCreateBatchEndpoint() {
         endpoint = EndPoints.CREATE_BATCH.getEndpoint();
     }
-
-
+    
     // prepare request with token
     public void prepareRequestWithAuth() {
         String token = context.getToken();
@@ -51,15 +47,46 @@ public class BatchRequest {
 
                 Batch batch = new Batch();
                 batch.setbatchDescription(row.get("BatchDescription"));
+                String scenario = scenarioName.trim();
+                String batchName;
+                int programId;
+
+                if (scenario.equalsIgnoreCase("CreateBatchWithValidData")) {
+                	//  From Program created earlier
+                	programId = context.getProgramId("BATCH");
+                	// Use Program Name from Context
+                    batchName = context.getProgramName("BATCH") + "23";
+                } else {
+                	//  From Excel
+                	programId = Integer.parseInt(row.get("ProgramId"));
+                	batchName = row.get("BatchName");
+                }
+
+                batch.setprogramId(programId);
+                batch.setbatchName(batchName);
+                
+                if ( scenario.equalsIgnoreCase("CreateBatchWithMissingAdditionalFields")) {
+
+                    // Use Program Name from Context
+                    batchName = context.getProgramName("BATCH") + "25";
+                    programId = context.getProgramId("BATCH");
+
+                } else {
+                    //  Use Excel for negative / invalid cases
+                	programId = Integer.parseInt(row.get("ProgramId"));
+                    batchName = row.get("BatchName");
+                }
+
+                batch.setbatchName(batchName);
 				batch.setbatchName(row.get("BatchName"));
 				//batch.setbatchName(generateRandomString());
 				batch.setbatchNoOfClasses(Integer.parseInt(row.get("NoOfClasses")));
 				batch.setbatchStatus(row.get("BatchStatus"));
 				batch.setprogramId(Integer.parseInt(row.get("ProgramId")));
-//				if(scenarioName.equals("CreateBatchWithEmptyProgramId") || scenarioName.equals("CreateBatchWithInactiveProgramId"))
-//					batch.setprogramId(Integer.parseInt(row.get("ProgramId")));
-//				else
-//					batch.setprogramId(context.getProgramId(0));
+				if(scenarioName.equals("CreateBatchWithEmptyProgramId") || scenarioName.equals("CreateBatchWithInactiveProgramId"))
+					batch.setprogramId(Integer.parseInt(row.get("ProgramId")));
+				else
+					batch.setprogramId(context.getProgramId("BATCH"));
 
 				Response response = context.getRequest().body(batch).when().post(endpoint);
 
@@ -83,9 +110,9 @@ public class BatchRequest {
                 Integer.parseInt(response.jsonPath().getString("batchId"));
         String batchName =
                 response.jsonPath().getString("batchName");
-
-        context.addBatchId(batchId);
-        context.addBatchName(batchName);
+      
+        context.getBatchId("User");
+        context.getBatchName("User");
 
         LoggerLoad.info("batchId: " + batchId);
         LoggerLoad.info("batchName: " + batchName);
