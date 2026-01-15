@@ -1,3 +1,4 @@
+@user-login
 @admin-management
 Feature: Admin Authentication and Session Management
   As an Admin, I want to manage my login, password settings, and logout sessions through the API.

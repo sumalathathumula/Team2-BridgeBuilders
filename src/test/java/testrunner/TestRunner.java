@@ -6,7 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/resources/features/"},
         glue = {"stepDefinitions"},
-        tags = "@reset-password-module",
+        tags = "@user-login",
+//        tags = "@admin-management",
         plugin = {"pretty",
                 "html:target/BridgeBuilders.html",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",

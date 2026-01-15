@@ -1,4 +1,4 @@
-package stepDefinitions;
+package utilities;
 
 import endpoints.EndPoints;
 import io.restassured.http.ContentType;

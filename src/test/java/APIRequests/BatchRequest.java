@@ -3,9 +3,11 @@ package APIRequests;
 import context.ScenarioContext;
 import endpoints.EndPoints;
 import io.restassured.response.Response;
+
+import lombok.extern.slf4j.Slf4j;
 import models.Batch;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import utilities.ExcelReader;
-import utilities.LoggerLoad;
 import utilities.RequestSpecFactory;
 import static io.restassured.RestAssured.given;
 
@@ -13,8 +15,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
+@Slf4j
 public class BatchRequest {
 	
 	//private final ScenarioContext context = ScenarioContext.getInstance();
@@ -66,9 +68,9 @@ public class BatchRequest {
 				context.setResponse(response);
 				context.setRowData(row);
 
-				LoggerLoad.info("Status Code: " + response.getStatusCode());
+				log.info("Status Code: {}", response.getStatusCode());
 				if (response.getStatusCode() != 401 && response.getStatusCode() != 404) {
-					LoggerLoad.info("Status Message: " + response.jsonPath().getString("message"));
+					log.info("Status Message: {}", response.jsonPath().getString("message"));
 				}
 
 				break;
@@ -87,8 +89,8 @@ public class BatchRequest {
         context.addBatchId(batchId);
         context.addBatchName(batchName);
 
-        LoggerLoad.info("batchId: " + batchId);
-        LoggerLoad.info("batchName: " + batchName);
+        log.info("batchId: {}", batchId);
+        log.info("batchName: {}", batchName);
     }
 
 }

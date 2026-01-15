@@ -1,3 +1,4 @@
+@user-login
 @reset-password-module
 Feature: Admin Reset Password Controller
   As an Admin, I want to manage password resets through the API.
@@ -18,11 +19,14 @@ Feature: Admin Reset Password Controller
 
     Examples:
       | authorization_type | email_state | password_state | method | endpoint_type | status_code |
+      | no                 | valid       | old            | POST   | valid         | 401         |
+      | valid              | new         | special_char   | POST   | valid         | 400         |
+      | valid              | valid       | new            | POST   | invalid       | 404         |
+      | valid              | valid       | new            | GET    | valid         | 405         |
+      | valid              | invalid     | new            | POST   | valid         | 400         |
+#      | valid              | valid       | new            | POST   | valid         | 200         |   //>> DO NOT ENABLE
       | valid              | valid       | valid          | POST   | valid         | 200         |
-#      | no                 | valid       | old            | POST   | valid         | 401         |
-#      | valid              | new         | special_char   | POST   | valid         | 400         |
-#      | valid              | valid       | new            | POST   | invalid       | 404         |
-#      | valid              | valid       | new            | GET    | valid         | 405         |
-#      | valid              | new         | invalid        | POST   | valid         | 400         |
+
+
 #      | authorization      | valid       | new            | POST   | invalid baseURL | 404         |
 #      | authorization      | valid       | invalid content type | POST   | valid endpoint   | 415         |

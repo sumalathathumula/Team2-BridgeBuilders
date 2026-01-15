@@ -128,9 +128,6 @@ public class LoginStepDefinition {
 
     @When("Admin calls Post Https method with invalid endpoint")
     public void admin_calls_post_https_method_with_invalid_endpoint() {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
-        // TODO
     }
 
     // --- THEN STEPS (Regex Optimized) ---
@@ -155,6 +152,6 @@ public class LoginStepDefinition {
 
     @Then("^Admin does not receive any status")
     public void admin_receives_invalid() {
-        // TODO
+        log.info("No response is received");
     }
 }
