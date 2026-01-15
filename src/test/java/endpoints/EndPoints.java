@@ -7,11 +7,15 @@ public enum EndPoints {
 		//user end points
 		CREATE_USER("/users/roleStatus"),
         CREATE_NEWSKILL("/SaveSkillMaster"),
-        GETALL_SKILLMASTER("/allSkillMaster"),
-        GETSKILL_BYSKILLNAME("/skills/{skillMasterName}"),
+        CREATE_NEWSKILLINVALID("/SaveSkillMaster/M"),
+        GETALL_SKILLMASTER("/allSkillMaster"),//valid
+        GETALL_SKILLMASTERINVALID("/allSkillMasterss"),//invalid
+        GETSKILL_BYSKILLNAME("/skills/{skillMasterName}"),//valid
+        GETSKILL_BYSKILLNAMEINVALID("/skills/{skillMasterName}/m"),//invalid
         UPDATESKILL_BYSKILLID("/updateSkills/{SkillId}"),
-        DELETESKILL_BYSKILLID("/deletebySkillId/{skillId}");
-
+        UPDATESKILL_BYSKILLIDINVALID("/updateSkills/{SkillId}/n"),
+        DELETESKILL_BYSKILLID("/deletebySkillId/{skillId}"),
+        DELETESKILL_BYSKILLIDINVALID ("/deletebySkillId/{skillId}/M");
 
 
 	

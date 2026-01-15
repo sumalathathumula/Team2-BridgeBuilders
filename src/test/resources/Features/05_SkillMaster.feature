@@ -53,8 +53,9 @@ Feature: Skill Master Module API
 
     Examples:
       | Scenario                          | ExpectedStatusCode | ExpectedStatusMessage |
-      | Update Skill with valid data      | 200                | OK                    |
-      | Update Skill with invalid skillId | 404                | Not Found             |
+      | Update Skill with valid skillId   | 200                | OK                    |
+      | Update Skill with Invalid skillId | 404                | Not Found             |
+      | Update Skill with Invalid endpoint| 404                | Not Found             |
 
   @DELETESKILLBYSKILLID
    Scenario Outline: Check if admin able to Delete  Skill ID  using DELETE request
@@ -64,8 +65,8 @@ Feature: Skill Master Module API
     Examples:
       | Scenario                          | ExpectedStatusCode | ExpectedStatusMessage |
       | Delete Skill with valid skillId   | 200               | OK                     |
-      | Delete Skill with invalid skillId | 404               | Not Found              |
-
+      | Delete Skill with Invalid skillId | 404               | Not Found              |
+      | Delete Skill with Invalid endpoint| 404               | Not Found              |
 
 
 
