@@ -17,10 +17,59 @@ Feature: Skill Master Module API
       |  Create Skill with Already existing SkillName     |
 
       |  Create Skill with Missing SkillName field        |
-      |      Scenario                                         |
 
-      |      Create Skill with Valid Data                     |
+  @GETALLSKILLMASTER
+  Scenario Outline: Check if admin able to get all  Skill Master
 
-      |      Create Skill with Already existing SkillName     |
+    Given Admin creates GET Request for the LMS API endpoint
 
-      |      Create Skill with Missing SkillName field        |
+    When Admin sends HTTPS Request from row "<Scenario>"
+
+    Then the response body should be equal to "<ExpectedStatusMessage>" and "<ExpectedStatusCode>"
+
+
+    Examples:
+
+     |    Scenario                              | ExpectedStatusCode | ExpectedStatusMessage |
+     |   Get all Skills by Valid endpoint       | 200                |  OK                   |
+
+     |   Get all Skills by Invalid endpoint     | 404                |  Not Found            |
+
+  @GETSKILLBYSKILLNAME
+  Scenario Outline: Check if admin able to get skill by Skill Name
+    Given Admin creates GET Request for the LMS API endpoint
+    When Admin sends HTTPS Request from row "<Scenario>"
+    Then the response body should be equal to "<ExpectedStatusMessage>" and "<ExpectedStatusCode>"
+
+    Examples:
+      | Scenario                         | ExpectedStatusCode | ExpectedStatusMessage   |
+      | Get Skill Name by Valid endpoint  | 200               | OK                      |
+      | Get Skill Name by Invalid endpoint| 404               | Not Found               |
+  @UPDATESKILLBYSKILLID
+  Scenario Outline: Check if admin able to update Skill Master using PUT request
+    Given Admin creates PUT Request for the LMS API endpoint
+    When   Admin sends HTTPS PUT Request from row "<Scenario>"
+    Then the response body should be equal to "<ExpectedStatusMessage>" and "<ExpectedStatusCode>"
+
+    Examples:
+      | Scenario                          | ExpectedStatusCode | ExpectedStatusMessage |
+      | Update Skill with valid data      | 200                | OK                    |
+      | Update Skill with invalid skillId | 404                | Not Found             |
+
+  @DELETESKILLBYSKILLID
+   Scenario Outline: Check if admin able to Delete  Skill ID  using DELETE request
+    Given Admin creates  DELETE Request for the LMS API endpoint
+    When Admin sends HTTPS Request from row "<Scenario>"
+    Then the response body should be equal to "<ExpectedStatusMessage>" and "<ExpectedStatusCode>".
+    Examples:
+      | Scenario                          | ExpectedStatusCode | ExpectedStatusMessage |
+      | Delete Skill with valid skillId   | 200               | OK                     |
+      | Delete Skill with invalid skillId | 404               | Not Found              |
+
+
+
+
+
+
+
+
