@@ -52,10 +52,11 @@ Feature: Skill Master Module API
     Then the response body should be equal to "<ExpectedStatusMessage>" and "<ExpectedStatusCode>"
 
     Examples:
-      | Scenario                          | ExpectedStatusCode | ExpectedStatusMessage |
-      | Update Skill with valid skillId   | 200                | OK                    |
-      | Update Skill with Invalid skillId | 404                | Not Found             |
-      | Update Skill with Invalid endpoint| 404                | Not Found             |
+      | Scenario                            | ExpectedStatusCode | ExpectedStatusMessage |
+      | Update Skill with valid skillId     | 200                | OK                    |
+      | Update Skill with Invalid skillId   | 404                | Not Found             |
+      | Update Skill with empty request body| 400                | Bad Request           |
+      | Update Skill with Invalid endpoint  | 404                | Not Found             |
 
   @DELETESKILLBYSKILLID
    Scenario Outline: Check if admin able to Delete  Skill ID  using DELETE request
