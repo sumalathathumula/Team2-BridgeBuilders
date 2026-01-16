@@ -1,6 +1,7 @@
 package APIRequests;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -68,5 +69,97 @@ public class ProgramRequest {
 //	                LoggerLoad.error("Program creation failed: " + e);
 //	            }
 	        }
+	        public void getallprogram()
+			{
+				endpoint = EndPoints.GET_ALL_PROGRAMS.getEndpoint();
+			}
+	        public void getallprogramInvalid() {
+				endpoint = EndPoints.GET_ALL_PROGRAMS.getEndpoint()+ "3";
+			}
+	        public void updateprogrambyprogramid() {
+				endpoint = EndPoints.UPDATE_PROGRAM_BYPROGRAMID.getEndpoint();
+			}
+	        public void updateprogrambyprogramname() {
+				endpoint = EndPoints.UPDATE_PROGRAM_BYPROGRAMNAME.getEndpoint();
+			}
+	        
+	        
 
+			private Map<String, Object> buildUpdateRequestBody(Map<String, String> row , String scenarioName) {
+			    Map<String, Object> body = new HashMap<>();
+			    String programName = row.get("ProgramName");
+			    String programStatus = row.get("ProgramStatus");
+			    String programDescription = row.get("ProgramDescription");
+			   
+			    if (programName != null) {
+			    body.put("programName", programName.trim());
+			    }
+			    body.put("programStatus", programStatus.trim());
+			    body.put("programDescription",row.getOrDefault("programDescription", "Updated"));
+			    return body;
+			}
+	        public void updateProgramIdFromExcelRow(String scenarioName) throws Exception {
+			    List<Map<String, String>> rows =
+			            ExcelReader.getData(ConfigReader.getProperty("excelPath"), "Program");
+			    for (Map<String, String> row : rows) {
+			        if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
+			            context.setRowData(row);
+			            Map<String, Object> payload = buildUpdateRequestBody(row,scenarioName);
+			            Integer programId;
+			          
+			           
+			            if (scenarioName.contains("InvalidProgramId")) {
+			                programId = 999999; // non-existing numeric ID
+			            }
+			            // Valid Program ID
+			            else {
+			                programId = context.getProgramId("DELETE_BY_ID");
+			              
+			            }
+			            Response response =
+			                    context.getRequest()
+			                            .pathParam("programId", programId) // correct param
+			                            .body(payload)
+			                            .log().body()
+			                            .put(endpoint);
+			            context.setResponse(response);
+			            LoggerLoad.info("Status Code: " + response.getStatusCode());
+			            LoggerLoad.info("Response Body: " + response.asPrettyString());
+			            break;
+		           
+		        }
+		    }
+		}
+		public void updateProgramNameFromExcelRow(String scenarioName) throws Exception {
+		    List<Map<String, String>> rows =
+		            ExcelReader.getData(ConfigReader.getProperty("excelPath"), "Program");
+		    for (Map<String, String> row : rows) {
+		        if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
+		            context.setRowData(row);
+		            Map<String, Object> payload = buildUpdateRequestBody(row,scenarioName);
+		            String programName;
+		          
+		            if (scenarioName.contains("InvalidProgramName")) {
+		                programName = "zyxcba";
+		            }
+		         
+		            else {
+		                programName = context.getProgramName("DELETE_BY_NAME");
+	 
+		            }
+		            Response response =
+		                    context.getRequest()
+		                            .pathParam("programName", programName) // correct param
+		                            .body(payload)
+		                            .log().body()
+		                            .put(endpoint);
+		            context.setResponse(response);
+		            LoggerLoad.info("Status Code: " + response.getStatusCode());
+		            LoggerLoad.info("Response Body: " + response.asPrettyString());
+		            break;
+	           
+	        }
+	    }
+	}
+		
 }

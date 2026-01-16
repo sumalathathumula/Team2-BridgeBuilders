@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "batchId": { "type": "integer" },
+      "batchName": { "type": "string" },
+      "batchDescription": { "type": ["string", "null"] },
+      "batchStatus": { "type": "string", "enum": ["Active", "Inactive"] },
+      "batchNoOfClasses": { "type": "integer" },
+      "programId": { "type": "integer" },
+      "programName": { "type": "string" }
+    },
+    "required": [
+      "batchId",
+      "batchName",
+      "batchStatus",
+      "batchNoOfClasses",
+      "programId",
+      "programName"
+    ]
+  }

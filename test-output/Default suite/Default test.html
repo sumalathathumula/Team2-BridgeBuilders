@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>44/6/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 15 12:36:48 EST 2026</td>
+<td>Started on:</td><td>Fri Jan 16 16:39:41 EST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>22 seconds (22564 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19245 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,60 +76,218 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1817069678", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1817069678'><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: programId.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at stepDefinitions.Programsteps.admin_sends_https_request_with_with_invalid_endpoint(Programsteps.java:159)
+	at ✽.Admin sends HTTPS Request with with Invalid endpoint(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:43)
+</pre></div><a href='#' onClick='toggleBox("stack-trace351147066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace351147066'><pre>java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: programId.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at stepDefinitions.Programsteps.admin_sends_https_request_with_with_invalid_endpoint(Programsteps.java:159)
+	at ✽.Admin sends HTTPS Request with with Invalid endpoint(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:43)
 </pre></div></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if admin able to create a user with invalid endpoint", "User Module"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [404] but found [405]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:63)
-</pre></div><a href='#' onClick='toggleBox("stack-trace825134767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace825134767'><pre>java.lang.AssertionError: Status code validation failed! expected [404] but found [405]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:63)
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;InvalidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1940982133", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1940982133'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;InvalidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
 </pre></div></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -137,10 +295,10 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1383)
 	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace385990323", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace385990323'><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div><a href='#' onClick='toggleBox("stack-trace403879268", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace403879268'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -148,14 +306,14 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1383)
 	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
 </pre></div></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -163,10 +321,10 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1383)
 	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace542753791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace542753791'><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2088048274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2088048274'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -174,40 +332,42 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1383)
 	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
 </pre></div></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [401] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace836211136", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace836211136'><pre>java.lang.AssertionError: Status code validation failed! expected [401] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;MissingMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1534243130", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1534243130'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;MissingMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
 </pre></div></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [404] but found [400]
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;ValidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1428887030", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1428887030'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;ValidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -215,10 +375,10 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1383)
 	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1053991692", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1053991692'><pre>java.lang.AssertionError: Status code validation failed! expected [404] but found [400]
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1617463959", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1617463959'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -226,8 +386,8 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1383)
 	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-	at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
 </pre></div></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
@@ -241,49 +401,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
 <td></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
 <td></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to assign admin to program or batch using PUT API", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>1</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
 <td></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if admin able to generate token with valid credential", "Admin Login Controller - Token Generation"</td>
 <td></td>
-<td>5</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to assign admin to program or batch using PUT API", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
+<td>9</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
@@ -291,172 +426,32 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
 <td></td>
-<td>0</td>
+<td>1</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a Batch with valid endpoint and request body", "Create Batch API"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if admin able to retrieve all users with invalid Endpoint", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if admin able to retrieve a admin with valid admin ID", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if admin able to create a user with valid endpoint and request body without authorization.", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to assign admin to program or batch using PUT API", "User Module"</td>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
 <td></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
 <td></td>
-<td>0</td>
+<td>1</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a Batch with valid endpoint and request body", "Create Batch API"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if admin able to retrieve all admin  with valid LMS API", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to update admin role status using PUT API", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to update admin role status using PUT API", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
 <td></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
 <td></td>
-<td>0</td>
+<td>1</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if admin able to retrieve a admin with valid role ID", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to update admin role status using PUT API", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin able to create a User with valid endpoint and request body", "User Module"</td>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
 <td></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>

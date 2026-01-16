@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="50" passed="44" failed="6" skipped="0">
+<testng-results ignored="0" total="18" passed="11" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-15T12:36:48 GMT-05:00" name="Default suite" finished-at="2026-01-15T12:37:10 GMT-05:00" duration-ms="22564">
+  <suite started-at="2026-01-16T16:39:41 GMT-05:00" name="Default suite" finished-at="2026-01-16T16:40:00 GMT-05:00" duration-ms="19245">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-15T12:36:48 GMT-05:00" name="Default test" finished-at="2026-01-15T12:37:10 GMT-05:00" duration-ms="22564">
+    <test started-at="2026-01-16T16:39:41 GMT-05:00" name="Default test" finished-at="2026-01-16T16:40:00 GMT-05:00" duration-ms="19245">
       <class name="testrunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:48 GMT-05:00" name="setUpClass" finished-at="2026-01-15T12:36:49 GMT-05:00" duration-ms="975" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:41 GMT-05:00" name="setUpClass" finished-at="2026-01-16T16:39:43 GMT-05:00" duration-ms="1534" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@560e1459]]>
+                <![CDATA[org.testng.TestRunner@54eb2bf6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:49 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:54 GMT-05:00" duration-ms="5173" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:43 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:52 GMT-05:00" duration-ms="9010" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:54 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:55 GMT-05:00" duration-ms="526" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:52 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:53 GMT-05:00" duration-ms="1482" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:55 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:55 GMT-05:00" duration-ms="426" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:53 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:54 GMT-05:00" duration-ms="1036" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:55 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:55 GMT-05:00" duration-ms="416" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:54 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:55 GMT-05:00" duration-ms="1191" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,73 +85,340 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:55 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:56 GMT-05:00" duration-ms="444" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:55 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:56 GMT-05:00" duration-ms="737" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin able to create a Batch with valid endpoint and request body"]]>
+                <![CDATA["Check if Admin able to create a program with different scenarios"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Create Batch API"]]>
+                <![CDATA["Program Module API"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:56 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:56 GMT-05:00" duration-ms="396" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:56 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:57 GMT-05:00" duration-ms="631" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin able to create a Batch with valid endpoint and request body"]]>
+                <![CDATA["Check if Admin able to create a program with different scenarios"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Create Batch API"]]>
+                <![CDATA["Program Module API"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:56 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:58 GMT-05:00" duration-ms="1383" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:57 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:57 GMT-05:00" duration-ms="280" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
+                <![CDATA[""]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Module"]]>
+                <![CDATA["Program Module API"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:58 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:58 GMT-05:00" duration-ms="415" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:57 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:57 GMT-05:00" duration-ms="226" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
+                <![CDATA[""]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Module"]]>
+                <![CDATA["Program Module API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:57 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:58 GMT-05:00" duration-ms="259" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Program Module API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:58 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:58 GMT-05:00" duration-ms="102" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Program Module API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: programId.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: programId.
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
+at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.FilterContext$next.call(Unknown Source)
+at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.FilterContext$next.call(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+at stepDefinitions.Programsteps.admin_sends_https_request_with_with_invalid_endpoint(Programsteps.java:159)
+at ✽.Admin sends HTTPS Request with with Invalid endpoint(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:43)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:58 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:58 GMT-05:00" duration-ms="257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Program Module API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:58 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:58 GMT-05:00" duration-ms="210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Program Module API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:58 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:59 GMT-05:00" duration-ms="320" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Program Module API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Map.get(Object)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Map.get(Object)" is null
+at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+at ✽.Admin sends HTTPS "ValidMandatoryField" RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:59 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:39:59 GMT-05:00" duration-ms="566" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Program Module API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Map.get(Object)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Map.get(Object)" is null
+at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+at ✽.Admin sends HTTPS "MissingMandatoryField" RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:39:59 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:40:00 GMT-05:00" duration-ms="880" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Program Module API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Map.get(Object)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "java.util.Map.get(Object)" is null
+at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+at ✽.Admin sends HTTPS "InvalidMandatoryField" RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:40:00 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:40:00 GMT-05:00" duration-ms="114" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Program Module API"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Status code validation failed! expected [201] but found [400]]]>
+              <![CDATA[Status code validation failed! expected [400] but found [404]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -159,33 +426,33 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
 at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:58 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:58 GMT-05:00" duration-ms="401" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:40:00 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:40:00 GMT-05:00" duration-ms="68" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
+                <![CDATA[""]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Module"]]>
+                <![CDATA["Program Module API"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Status code validation failed! expected [201] but found [400]]]>
+              <![CDATA[Status code validation failed! expected [400] but found [404]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -193,49 +460,33 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
 at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:58 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:59 GMT-05:00" duration-ms="505" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:40:00 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T16:40:00 GMT-05:00" duration-ms="20" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
+                <![CDATA[""]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:59 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:36:59 GMT-05:00" duration-ms="291" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
+                <![CDATA["Program Module API"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Status code validation failed! expected [201] but found [400]]]>
+              <![CDATA[Status code validation failed! expected [400] but found [404]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -243,693 +494,15 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
 at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
+at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:36:59 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:00 GMT-05:00" duration-ms="325" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:00 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:00 GMT-05:00" duration-ms="267" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:00 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:00 GMT-05:00" duration-ms="265" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:00 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:01 GMT-05:00" duration-ms="346" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:01 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:01 GMT-05:00" duration-ms="332" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:01 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:01 GMT-05:00" duration-ms="273" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:01 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:01 GMT-05:00" duration-ms="287" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:01 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:02 GMT-05:00" duration-ms="289" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:02 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:02 GMT-05:00" duration-ms="285" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:02 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:02 GMT-05:00" duration-ms="281" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:02 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:03 GMT-05:00" duration-ms="293" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:03 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:03 GMT-05:00" duration-ms="287" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:03 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:03 GMT-05:00" duration-ms="250" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:03 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:03 GMT-05:00" duration-ms="265" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:03 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:04 GMT-05:00" duration-ms="226" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:04 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:04 GMT-05:00" duration-ms="247" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:04 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:04 GMT-05:00" duration-ms="273" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:04 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:04 GMT-05:00" duration-ms="271" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:04 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:05 GMT-05:00" duration-ms="275" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:05 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:05 GMT-05:00" duration-ms="289" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:05 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:05 GMT-05:00" duration-ms="256" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:05 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:06 GMT-05:00" duration-ms="274" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:06 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:06 GMT-05:00" duration-ms="241" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:06 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:06 GMT-05:00" duration-ms="259" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:06 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:06 GMT-05:00" duration-ms="261" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:06 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:07 GMT-05:00" duration-ms="268" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Status code validation failed! expected [401] but found [400]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [401] but found [400]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:07 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:07 GMT-05:00" duration-ms="265" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to create a User with valid endpoint and request body"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Status code validation failed! expected [404] but found [400]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [404] but found [400]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:07 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:07 GMT-05:00" duration-ms="244" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to create a user with valid endpoint and request body without authorization."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:07 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:07 GMT-05:00" duration-ms="240" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to create a user with invalid endpoint"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Status code validation failed! expected [404] but found [405]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Status code validation failed! expected [404] but found [405]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-at stepDefinitions.UserSteps.the_response_status_should_be_equal_to_expected_status_for_create_user(UserSteps.java:59)
-at ✽.the response status should be equal to ExpectedStatus for create user(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/04_User.feature:63)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:07 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:08 GMT-05:00" duration-ms="516" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to retrieve all admin  with valid LMS API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:08 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:08 GMT-05:00" duration-ms="164" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to retrieve all users with invalid Endpoint"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:08 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:08 GMT-05:00" duration-ms="186" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to retrieve a admin with valid admin ID"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:08 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:09 GMT-05:00" duration-ms="546" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if admin able to retrieve a admin with valid role ID"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:09 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:09 GMT-05:00" duration-ms="298" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to assign admin to program or batch using PUT API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:09 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:09 GMT-05:00" duration-ms="299" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to assign admin to program or batch using PUT API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:09 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:10 GMT-05:00" duration-ms="239" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to assign admin to program or batch using PUT API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:10 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:10 GMT-05:00" duration-ms="277" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to update admin role status using PUT API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:10 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:10 GMT-05:00" duration-ms="249" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to update admin role status using PUT API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:10 GMT-05:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-15T12:37:10 GMT-05:00" duration-ms="260" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin able to update admin role status using PUT API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-15T12:37:10 GMT-05:00" name="tearDownClass" finished-at="2026-01-15T12:37:10 GMT-05:00" duration-ms="34" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@6f53b8a]" started-at="2026-01-16T16:40:00 GMT-05:00" name="tearDownClass" finished-at="2026-01-16T16:40:00 GMT-05:00" duration-ms="133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

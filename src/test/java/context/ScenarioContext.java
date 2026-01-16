@@ -109,6 +109,12 @@ public class ScenarioContext {
     public String getRoleId() {
         return role_id;
     }
+    public Integer getLatestProgramId() {
+        return programIds.values().iterator().next();
+    }
+    public String getLatestProgramName() {
+    	return programNames.values().iterator().next();
+    			}
    
     // CLEANUP 
 

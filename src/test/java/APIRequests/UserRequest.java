@@ -27,6 +27,10 @@ public class UserRequest {
    	    endpoint = EndPoints.UPDATE_USER_ROLEID.getEndpoint();
    	}
     
+    public void prepareUpdateUserRequest() {
+        endpoint = EndPoints.UPDATE_USER.getEndpoint();
+    }
+    
     //Read Excel and Build User POJO  
        
     private User buildUserFromExcelRow(Map<String, String> row) {
@@ -215,7 +219,7 @@ public class UserRequest {
  }
  
  
- 
+ //PUTREQUEST(Update admin by admin ID)
  private Map<String, Object> buildUpdateAdminRolePayload(
 	        Map<String, String> row,
 	        String scenarioName) {
@@ -243,6 +247,8 @@ public class UserRequest {
 
 	    return payload;
 	}
+ 
+ 
  public void updateAdminRoleStatusFromExcelRow(String scenarioName) throws Exception {
 
 	    List<Map<String, String>> rows =
@@ -282,6 +288,75 @@ public class UserRequest {
 	    }
 	}
 
+//updateuser
+ private User buildUpdateAdminPayload(
+	        Map<String, String> row,
+	        String scenarioName) {
+
+	    User user = new User();
+
+	    // Mandatory fields
+	    if (!scenarioName.contains("MissingMandatoryFields")) {
+	        user.setuserFirstName(row.get("userFirstName"));
+	        user.setuserLastName(row.get("userLastName"));
+	        user.setuserPhoneNumber(row.get("userPhoneNumber"));
+	    }
+
+	    // Optional / additional fields
+	    user.setuserMiddleName(row.get("userMiddleName"));
+	    user.setuserLocation(row.get("userLocation"));
+	    user.setuserTimeZone(row.get("userTimeZone"));
+	    user.setuserLinkedinUrl(row.get("userLinkedinUrl"));
+	    user.setuserEduUg(row.get("userEduUg"));
+	    user.setuserEduPg(row.get("userEduPg"));
+	    user.setuserComments(row.get("userComments"));
+	    user.setuserVisaStatus(row.get("userVisaStatus"));
+	    if (row.get("userLoginEmail") != null) {
+            UserLogin login = new UserLogin();
+            login.setuserLoginEmail(row.get("userLoginEmail"));
+            login.setloginStatus(row.get("loginStatus"));
+            user.setuserLogin(login);
+        }
+
+	    return user;
+	}
  
+ public void updateAdminFromExcelRow(String scenarioName) throws Exception {
+
+	    List<Map<String, String>> rows =
+	            ExcelReader.getData(ConfigReader.getProperty("excelPath"), "User");
+
+	    for (Map<String, String> row : rows) {
+
+	        if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
+
+	            context.setRowData(row);
+
+	            User payload = buildUpdateAdminPayload(row, scenarioName);
+
+	            String userId;
+
+	            if (scenarioName.contains("InvalidAdminId")) {
+	                userId = "U0000"; // invalid admin ID
+	            } else {
+	                userId = context.getUserId(); // valid admin ID
+	            }
+
+	            Response response = context.getRequest()
+	                    .pathParam("userId", userId)
+	                    .body(payload)
+	                    .log().body()
+	                    .put(endpoint);
+
+	            context.setResponse(response);
+
+	            LoggerLoad.info("Status Code: " + response.getStatusCode());
+	            LoggerLoad.info("Response Body: " + response.asPrettyString());
+
+	            break;
+	        }
+	    }
+	}
+
 
 }
