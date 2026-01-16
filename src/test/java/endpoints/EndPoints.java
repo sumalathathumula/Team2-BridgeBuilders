@@ -5,7 +5,7 @@ public enum EndPoints {
 	//Login end points
 		USER_SIGN_IN("/login"),
 		//user end points
-		CREATE_USER("/users/roleStatus"),
+		CREATE_BATCH("/users/roleStatus"),
 	    GET_BATCHES("/batches"),
 	    INVALID_BATCH_ENDPOINT("/batchess"),
 	    GET_BATCH_BY_NAME("/batches/batchName/"),

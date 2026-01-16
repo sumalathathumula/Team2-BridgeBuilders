@@ -7,7 +7,6 @@ public class Batch {
 	private int batchNoOfClasses;
 	private String batchStatus;
 	private int programId;
-
 	
 	public String getbatchDescription() {
 		return batchDescription;
@@ -39,5 +38,4 @@ public class Batch {
 	public void setprogramId(int programId) {
 		this.programId = programId;
 	}
-	
 }

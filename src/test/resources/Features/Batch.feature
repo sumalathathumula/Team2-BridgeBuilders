@@ -7,7 +7,7 @@ Feature: Create Batch API
   # ============================
   # POST Request
   # ============================  
-      
+     
 
   Scenario Outline: Admin able to create a Batch with valid endpoint and request body
     Given Admin creates POST Request with valid data in request body for create batch
@@ -17,9 +17,7 @@ Feature: Create Batch API
   Examples:
   
     | Scenario 	                                     |
-    | CreateBatchWithValidBatchName		    					 |
-    | CreateBatchWithInvalidBatchName	    					 |
-  	| CreateBatchWithValidData											 |
+    | CreateBatchWithValidData									 		 |
   	| CreateBatchWithMissingAdditionalFields         |
   	| CreateBatchWithValidRequestBody                |
   	| CreateBatchWithEmptyProgramId                  |
@@ -32,7 +30,7 @@ Feature: Create Batch API
   	| CreateBatchWithInvalidData                     |
   	| CreateBatchWithValidBatchDescription           |
   
-  @admin-login	
+  
   Scenario Outline: Check if admin is able to create a Batch with negative scenarios
   Given Admin sets Authorization to "<Authorization>"
   When Admin sends HTTPS POST request to "<Endpoint>"
@@ -62,7 +60,7 @@ Examples:
       | noAuth                  | 401        | Unauthorized   |
       | validwithInvalidEndpoint| 404        | Not Found      |
   
-  
+  	 
     
   # ============================
   # Retrieve batch by Batch ID
@@ -81,7 +79,7 @@ Examples:
       | RetrieveBatchwithInvalidBatchID           | 404        | Not Found      |
       | BatchInvalidEndpoint                      | 404        | Not Found      |
       
-  
+ 
   # ============================
   # Retrieve batch by Batch NAME
   # ============================
@@ -98,7 +96,7 @@ Examples:
       | InvalidBatchName                 | 404        | Not Found    |
       | RetrieveDeletedBatchByName       | 404        | Not Found    |
     
-
+ 
   # ============================
   # Retrieve batch by Program ID
   # ============================
@@ -135,11 +133,12 @@ Examples:
     | InvalidBatchId         | 404                |
     | WithoutAuthorization   | 401                |
     
-    
+  
+   
   # ============================
   # Update batch by Batch ID
   # ============================
-      
+      	
     Scenario Outline: Admin able to update a Batch with valid endpoint and request body
     Given Admin creates UPDATE Request with valid data in request body for update batch
     When Admin sends HTTPS Request with data from row "<Scenario>" for update batch
@@ -150,10 +149,23 @@ Examples:
     | Scenario 	                                     |
     | UpdateBatchIdWithAllFields                     |
   	| UpdateBatchIdWithMandatoryFields               |
-  	| UpdateBatchIdWithMandatoryFields               |
+  	| UpdateBatchIdWithMissingMandatoryFields        |
     | UpdateBatchWithInvalidData                     |
   	| UpdateBatchWithDeletedBatchId                  |
   	| UpdateBatchWithDeletedProgramID                |
   	| UpdateBatchWithInvalidBatchId                  |
+  
+  @admin-login 	
+  Scenario Outline: Check if admin is able to update a Batch with negative scenarios
+  Given Admin sets update request to "<Authorization>"
+  When Admin sends update request to "<Endpoint>"
+  Then Admin should receive "<ExpectedStatusCode>" response
+
+Examples:
+| Authorization  | Endpoint       | ExpectedStatusCode |
+| NoAuth         | valid          | 401                |
+| BearerToken    | Invalid        | 404                |
+  
+  	
   	
       
