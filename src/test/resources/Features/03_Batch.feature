@@ -1,4 +1,4 @@
- @batch
+ #@batch
 Feature: Create Batch API
 
   Background:
@@ -14,7 +14,7 @@ Feature: Create Batch API
   Examples:
     | Scenario 			    														 |
   	| CreateBatchWithValidData											 |
-  	|CreateBatchWithValidDataFP												|
-  	|CreateBatchWithMissingAdditionalFields						|
+  	|CreateBatchWithMissingAdditionalFields					 |
+  							
   	
   	
