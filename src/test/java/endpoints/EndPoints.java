@@ -51,7 +51,21 @@ public enum EndPoints {
     UPDATE_USER_ROLE_PROGRAM_BATCH_STATUS("/users/roleProgramBatchStatus/{userId}"),
     UPDATE_USER_LOGIN_STATUS("/users/userLogin/{userId}"),
     
-    DELETE_USER("/users/{userID}");
+    DELETE_USER("/users/{userID}"),
+	
+	
+	 CREATE_NEWSKILL("/SaveSkillMaster"),
+     CREATE_NEWSKILLINVALID("/SaveSkillMaster/M"),
+     GETALL_SKILLMASTER("/allSkillMaster"),//valid
+     GETALL_SKILLMASTERINVALID("/allSkillMasterss"),//invalid
+     GETSKILL_BYSKILLMASTERNAME("/skills/{skillMasterName}"),//valid
+     GETSKILL_BYSKILLMASTERNAMEINVALID("/skills/{skillMasterName}/m"),//invalid
+     UPDATESKILL_BYSKILLID("/updateSkills/{SkillId}"),
+     UPDATESKILL_BYSKILLIDINVALID("/updateSkills/{SkillId}/n"),
+     DELETESKILL_BYSKILLID("/deletebySkillId/{skillId}"),
+     DELETESKILL_BYSKILLIDINVALID ("/deletebySkillId/{skillId}/M");
+	
+	
 	
 	private String endpoint;
 	private static final String baseUrl = "https://lms-hackthon-feb25-803334c87fbe.herokuapp.com/lms";

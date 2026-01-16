@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/7/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/11/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 16 16:39:41 EST 2026</td>
+<td>Started on:</td><td>Fri Jan 16 17:08:00 EST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19245 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12210 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,6 +75,204 @@ function toggleAllBoxes() {
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;ValidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2102280782", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2102280782'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;ValidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_response_body(Programsteps.java:59)
+	at ✽.Admin receives status code with response body(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1025197016", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1025197016'><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_response_body(Programsteps.java:59)
+	at ✽.Admin receives status code with response body(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:11)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2020393439", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2020393439'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1871867137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1871867137'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_response_body(Programsteps.java:59)
+	at ✽.Admin receives status code with response body(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1728766751", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1728766751'><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_response_body(Programsteps.java:59)
+	at ✽.Admin receives status code with response body(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:11)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;MissingMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+</pre></div><a href='#' onClick='toggleBox("stack-trace237279395", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace237279395'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
+	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
+	at ✽.Admin sends HTTPS &quot;MissingMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at context.ScenarioContext.getProgramId(ScenarioContext.java:79)
+	at stepDefinitions.Programsteps.admin_creates_get_request_with_valid_program_id_for_the_lms_api(Programsteps.java:134)
+	at ✽.Admin creates GET Request with  valid programId for the LMS API(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2103491930", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2103491930'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+	at context.ScenarioContext.getProgramId(ScenarioContext.java:79)
+	at stepDefinitions.Programsteps.admin_creates_get_request_with_valid_program_id_for_the_lms_api(Programsteps.java:134)
+	at ✽.Admin creates GET Request with  valid programId for the LMS API(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:36)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div><a href='#' onClick='toggleBox("stack-trace440787615", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace440787615'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
+	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
+<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_response_body(Programsteps.java:59)
+	at ✽.Admin receives status code with response body(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace220766773", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace220766773'><pre>java.lang.AssertionError: Status code validation failed! expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
+	at stepDefinitions.Programsteps.admin_receives_status_code_with_response_body(Programsteps.java:59)
+	at ✽.Admin receives status code with response body(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:11)
+</pre></div></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
 <td><div><pre>java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: programId.
@@ -172,8 +370,8 @@ function toggleAllBoxes() {
 	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
 	at stepDefinitions.Programsteps.admin_sends_https_request_with_with_invalid_endpoint(Programsteps.java:159)
 	at ✽.Admin sends HTTPS Request with with Invalid endpoint(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:43)
-</pre></div><a href='#' onClick='toggleBox("stack-trace351147066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace351147066'><pre>java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: programId.
+</pre></div><a href='#' onClick='toggleBox("stack-trace1514521112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1514521112'><pre>java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: programId.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -277,117 +475,11 @@ function toggleAllBoxes() {
 	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
 	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
 	at ✽.Admin sends HTTPS &quot;InvalidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1940982133", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1940982133'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
+</pre></div><a href='#' onClick='toggleBox("stack-trace1549086472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1549086472'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
 	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
 	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
 	at ✽.Admin sends HTTPS &quot;InvalidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
-</pre></div></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
-	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
-</pre></div><a href='#' onClick='toggleBox("stack-trace403879268", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace403879268'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
-	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
-</pre></div></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
-	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2088048274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2088048274'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
-	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
-</pre></div></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
-	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
-	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
-	at ✽.Admin sends HTTPS &quot;MissingMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1534243130", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1534243130'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
-	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
-	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
-	at ✽.Admin sends HTTPS &quot;MissingMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
-</pre></div></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
-	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
-	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
-	at ✽.Admin sends HTTPS &quot;ValidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1428887030", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1428887030'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
-	at APIRequests.ProgramRequest.updateProgramIdFromExcelRow(ProgramRequest.java:105)
-	at stepDefinitions.Programsteps.admin_sends_https_request_body(Programsteps.java:204)
-	at ✽.Admin sends HTTPS &quot;ValidMandatoryField&quot; RequestBody(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:62)
-</pre></div></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
-<td><div><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
-	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1617463959", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1617463959'><pre>java.lang.AssertionError: Status code validation failed! expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at utilities.ResponseValidator.validateStatusCode(ResponseValidator.java:17)
-	at stepDefinitions.Programsteps.admin_receives_status_code_with_status_message(Programsteps.java:232)
-	at ✽.Admin receives status code with status message(file:///C:/NumpyNinza/RestAssured_API_Hackathon_LMS_011026/Team2-BridgeBuilders/src/test/resources/Features/02_Program.feature:75)
 </pre></div></td>
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
@@ -416,39 +508,19 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
+<td></td>
+<td>0</td>
+<td>testrunner.TestRunner@6f53b8a</td></tr>
+<tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if admin able to generate token with valid credential", "Admin Login Controller - Token Generation"</td>
 <td></td>
-<td>9</td>
+<td>6</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
 <td></td>
 <td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
-<td></td>
-<td>1</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
-<td></td>
-<td>1</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Program Module API"</td>
-<td></td>
-<td>0</td>
-<td>testrunner.TestRunner@6f53b8a</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
-<td></td>
-<td>1</td>
 <td>testrunner.TestRunner@6f53b8a</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if Admin able to create a program with different scenarios", "Program Module API"</td>
