@@ -19,6 +19,8 @@ public class ScenarioContext {
 	private String userId;
 	private String role_id;
 	
+	private String currentSkillId;
+    private String currentSkillName;
     private ScenarioContext() {}
 
     public static synchronized ScenarioContext getInstance() {
@@ -109,6 +111,22 @@ public class ScenarioContext {
     public String getRoleId() {
         return role_id;
     }
+    public Integer getLatestProgramId() {
+        return programIds.values().iterator().next();
+    }
+    public String getLatestProgramName() {
+    	return programNames.values().iterator().next();
+    			}
+    public void setSkillId(String skill_Id) {
+        this.currentSkillId= skill_Id;
+    }
+    
+    public String getSkillId() {
+        return currentSkillId;
+    }
+        public String getSkillName() {
+        return currentSkillName;
+        }
    
     // CLEANUP 
 

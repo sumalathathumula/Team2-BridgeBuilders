@@ -1,4 +1,4 @@
-#@user
+@user
 Feature: User Module
  
  Background:
@@ -16,34 +16,34 @@ Feature: User Module
   	|CreateUserWithValidDataR03												|
   	|	CreateUserWithExistingPhoneNumber							  |
   	|CreateUserWithMandatoryFieldsValidData						|
-  	|CreateUserWithInvaliduserFirstName								|
-  	|CreateUserWithInvaliduserLastName 								|
-  	|CreateUserWithInvaliduserLocation								|
-  	|CreateUserWithInvaliduserPhoneNumber							|
-  	|CreateUserWithInvaliduserRoleStatus							|
-  	|CreateUserWithInvaliduserTimeZone								|
-  	|CreateUserWithInvaliduserVisaStatus 							|
-  	|CreateUserWithInvaliduserLoginEmail							|
-  	|CreateUserWithSpecialCharacterInuserLoginEmail		|
-  	|CreateUserWithSpecialCharacterInuserVisaStatus		|
-  	|CreateUserWithSpecialCharacterInuserTimeZone			|
-  	|CreateUserWithSpecialCharacterInuserRoleStatus	  |
-  	|CreateUserWithSpecialCharacterInroleId						|
-  	|CreateUserWithSpecialCharacterInuserPhoneNumber 	|
-  	|CreateUserWithSpecialCharacterInuserMiddleName		|
-  	|CreateUserWithSpecialCharacterInuserVisaStatus		|
-  	|CreateUserWithSpecialCharacterInuserLocation			|
-  	|CreateUserWithSpecialCharacterInuserLinkedinUrl 	|
-  	|CreateUserWithSpecialCharacterInuserLastName 		|
-  	|CreateUserWithSpecialCharacterInuserFirstName		|
-  	|CreateUserWithSpecialCharacterWithNumericloginStatus|
-  	|CreateUserWithEmptyuserFirstName								|
-  	|CreateUserWithEmptyuserLastName								|
-  	|CreateUserWithEmptyuserLoginEmail							|
-  	|CreateUserWithEmptyuserPhoneNumber							|
-  	|CreateUserWithNoAuth														|
-  	|CreateUserWithInvalidEndpoint									|
-  	
+  #	|CreateUserWithInvaliduserFirstName								|
+  #	|CreateUserWithInvaliduserLastName 								|
+  #	|CreateUserWithInvaliduserLocation								|
+  #	|CreateUserWithInvaliduserPhoneNumber							|
+  #	|CreateUserWithInvaliduserRoleStatus							|
+  #	|CreateUserWithInvaliduserTimeZone								|
+  #	|CreateUserWithInvaliduserVisaStatus 							|
+  #	|CreateUserWithInvaliduserLoginEmail							|
+  #	|CreateUserWithSpecialCharacterInuserLoginEmail		|
+  #	|CreateUserWithSpecialCharacterInuserVisaStatus		|
+  #	|CreateUserWithSpecialCharacterInuserTimeZone			|
+  #	|CreateUserWithSpecialCharacterInuserRoleStatus	  |
+  #	|CreateUserWithSpecialCharacterInroleId						|
+  #	|CreateUserWithSpecialCharacterInuserPhoneNumber 	|
+  #	|CreateUserWithSpecialCharacterInuserMiddleName		|
+  #	|CreateUserWithSpecialCharacterInuserVisaStatus		|
+  #	|CreateUserWithSpecialCharacterInuserLocation			|
+  #	|CreateUserWithSpecialCharacterInuserLinkedinUrl 	|
+  #	|CreateUserWithSpecialCharacterInuserLastName 		|
+  #	|CreateUserWithSpecialCharacterInuserFirstName		|
+  #	|CreateUserWithSpecialCharacterWithNumericloginStatus|
+  #	|CreateUserWithEmptyuserFirstName								|
+  #	|CreateUserWithEmptyuserLastName								|
+  #	|CreateUserWithEmptyuserLoginEmail							|
+  #	|CreateUserWithEmptyuserPhoneNumber							|
+  #	|CreateUserWithNoAuth														|
+  #	|CreateUserWithInvalidEndpoint									|
+  #	
   	    	
   	
   	  	#NOAUTH
@@ -56,7 +56,7 @@ Feature: User Module
     | Scenario 			    														 |
   	| CreateUserWithNoAuth													 |
   	
-    #INVALIDENDPOINT
+    #INVALIDENDPOINTPOSTUSER
   Scenario Outline: Check if admin able to create a user with invalid endpoint
     Given Admin creates POST Request  with valid data in request body with invalid endpoint for create user
     When Admin sends HTTPS Request with data from row "<Scenario>" for create user
@@ -104,6 +104,7 @@ Feature: User Module
       | AssignAdminToProgramBatchWithInvalidAdminId                        |
       | AssignAdminToProgramBatchWithMissingMandatoryField                 |
       
+      
      #PUTREQUEST(Update admin role status by admin ID)
      @UPDATE_USER_ROLEID 
     Scenario Outline: Admin able to update admin role status using PUT API    
@@ -117,6 +118,106 @@ Feature: User Module
       | UpdateAdminRoleStatusWithInvalidAdminId                   |
       | UpdateAdminRoleStatusWithMissingMandatoryField            |
       
+      #GETALLACTIVEUSERS
+      @Getallactiveusers
+			Scenario: Check if admin able to retrieve for all active users    
+			Given Admin creates GET Request for API endpoint with valid admin ID
+			When  Admin sends HTTPS Request with endpoint to get all active users
+			Then Admin receives 200 OK Status with response for all active users. 
+			
+			@Getallactiveusers1
+			Scenario: Check if admin able to retrieve all active usersfor invalid endpoint
+			Given Admin creates GET Request with invalid endpoint for all active users 
+			When Admin sends HTTPS Request with  invalid endpoint for all active users 
+			Then Admin receives 404 status with message Not Found for get all active users
+			
+			 #Getemailsofalluserswithactivestatus
+			@Getemailsofalluserswithactivestatus
+			Scenario: Check if admin able to retrieve email for all active users    
+			Given Admin creates GET Request for the LMS API with valid admin ID
+			When  Admin sends HTTPS Request with endpoint to get email of all active users
+			Then Admin receives 200 OK Status with response body for all active users. 
+			
+			@Getemailsofalluserswithactivestatus1
+			Scenario: Check if admin able to retrieve email all active users with invalid endpoint
+			Given Admin creates GET Request with invalid endpoint to fetch email of all active users 
+			When Admin sends HTTPS Request to fetch email with  invalid endpoint for all active users 
+			Then Admin receives 404 status with error message Not Found for get all active users
+			
+      #Getallroles		
+      @Getallroles  
+			Scenario: Check if admin able to retrieve  all roles    
+			Given Admin creates GET Request to get all roles API endpoint with valid admin ID
+			When  Admin sends HTTPS Request with endpoint to get all roles
+			Then Admin receives 200 OK Status with response body for all roles. 
+			
+			@Getallroles1
+			Scenario: Check if admin able to retrieve all roles for invalid endpoint
+			Given Admin creates GET Request with invalid endpoint 
+			When Admin sends HTTPS Request with  invalid endpoint for all roles 
+			Then Admin receives 404 status with error message Not Found for get all user roles
+			
+			#UPDATEUSERADMIN
+			@UPDATEUSER
+			Scenario Outline: Admin able to update admin using PUT API   
+    Given Admin creates PUT Request with valid LMS endpoint to update admin
+    When Admin sends HTTPS Request with data from row "<Scenario>" for update admin
+    Then the response status should be equal to ExpectedStatus for update admin
+
+    Examples:
+      | Scenario                                           |
+      | UpdateAdminWithValidAdminIdAndValidData            |
+      | UpdateAdminWithInvalidAdminIdAndValidData          |
+      | UpdateAdminWithMissingMandatoryFields              |
+      
+      #GETUSERFORPROGRAM
+    @getuserbyprogramId
+    Scenario: Check if admin able to retrieve a program for user   
+    Given Admin creates GET Request for the LMS API endpoint for getuserbyprogramId
+    When  Admin sends HTTPS Request with endpoint to getuserbyprogramId  details
+    Then Admin receives 200 OK Status with response body for getuserbyprogramId. 
+    
+    Scenario: Check if admin able to retrieve a program for user with invalid program id  
+    Given Admin creates GET Request for the LMS API endpoint for getuserbyprogramId with invalid program id
+    When  Admin sends HTTPS Request with endpoint to getuserbyprogramId  details with invalid program id
+    Then Admin receives 404 status with error message Not Found for get all user programs. 
+    
+    
+    
+    #GETUSERFORPROGRAMBATCH
+    
+     @getuserbyProgrambatchId
+    Scenario: Check if admin able to retrieve a batch for user   
+    Given Admin creates GET Request for the LMS API endpoint for getuserbyProgrambatchId
+    When  Admin sends HTTPS Request with endpoint to getuserbyProgrambatchId  details
+    Then Admin receives 200 OK Status with response body for getuserbyProgrambatchId. 
+    
+    Scenario: Check if admin able to retrieve a program for user with invalid program batch id  
+    Given Admin creates GET Request for the LMS API endpoint for getuserbyprogramId with invalid program batch id
+    When  Admin sends HTTPS Request with endpoint to getuserbyprogramId  details with invalid program batchid
+    Then Admin receives 404 status with error message Not Found for get all user program batches
+     
+     #DELETEUSERID
+     @DELETE_USER
+      Scenario: Check if admin able to delete admin with valid admin ID
+    
+    Given Admin creates a DELETE request with a valid adminId.
+    When Admin sends  HTTPS request to the endpoint for deleting admin by admin Id
+    Then Admin receives a 200 OK status with a message confirming the deletion of the admin by adminId.
+    
+     Scenario: Check if admin able to delete admin with invalid admin ID
+    
+    Given Admin creates DELETE Request with invalid adminId
+    When Admin sends HTTPS Request  with invalid adminId for deleting a batch by BatchId
+    Then Admin receives 404 Not Found with Message and boolean success details for the deletion of the admin by BatchId.
+    
+    
+    Scenario:  Check if admin able to delete a admin without authorization
+    
+    Given Admin creates DELETE Request  without authorization for the deletion of the admin by adminId
+    When Admin sends  HTTPS request to the endpoint for deleting admin by adminId without authorization
+    Then Admin receives 401 Unauthorized Status for the deletion of the admin by adminId.
+          
       
       
       

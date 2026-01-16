@@ -12,6 +12,7 @@ import APIRequests.BatchRequest;
 import context.ScenarioContext;
 import endpoints.EndPoints;
 import io.cucumber.java.en.*;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import models.Batch;
 import utilities.ConfigReader;
@@ -70,9 +71,31 @@ public class BatchSteps {
 			System.out.println("batchId for user:" +context.getBatchId("USER"));
 			System.out.println("batchName for user:" +context.getBatchName("USER"));
 			System.out.println("batchId for delete:" +context.getBatchId("DELETE_BY_BATCHID"));
-			System.out.println("batchName for delete:" +context.getBatchName("DELETE_BY_BATCHID"));			
+			System.out.println("batchName for delete:" +context.getBatchName("DELETE_BY_BATCHID"));	
+			
+			JsonPath jsonPath = response.jsonPath();
+			Map<String, String> expRow = context.getRowData();
+			// Validate schema
+			ResponseValidator.validateJsonSchema(response, "Batch_schema.json");
+
+			// Validate Data type
+			ResponseValidator.validateDataType(response, "batchId", Integer.class);
+			ResponseValidator.validateDataType(response, "batchName", String.class);
+			// ResponseValidator.validateDataType(response, "batchDescription", String.class);
+			ResponseValidator.validateDataType(response, "batchStatus", String.class);
+			ResponseValidator.validateDataType(response, "programName", String.class);
+			ResponseValidator.validateDataType(response, "batchNoOfClasses", Integer.class);
+			ResponseValidator.validateDataType(response, "programId", Integer.class);
+
+			// Validate Data
+			ResponseValidator.validateData(jsonPath.getString("batchName"), expRow.get("BatchName"));
+			ResponseValidator.validateData(jsonPath.getString("batchDescription"), expRow.get("BatchDescription"));
+			ResponseValidator.validateData(jsonPath.getString("batchNoOfClasses"), expRow.get("NoOfClasses"));
+			ResponseValidator.validateData(jsonPath.getString("batchStatus"), expRow.get("BatchStatus"));
+			ResponseValidator.validateData(jsonPath.getString("programId"), String.valueOf(context.getProgramId("BATCH")));
+		}
 			
 		}  
 	}
 
-}
+

@@ -16,6 +16,7 @@ public class User {
 	private String userTimeZone;
 	private String userVisaStatus;
 	private UserLogin userLogin;
+	
 
 	// Getters and Setters
 	public String getuserComments() {
@@ -121,4 +122,8 @@ public class User {
 	public void setuserLogin(UserLogin userLogin) {
 		this.userLogin = userLogin;
 	}
-}
+
+	
+		
+	}
+

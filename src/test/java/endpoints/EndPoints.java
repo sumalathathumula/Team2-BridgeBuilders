@@ -53,7 +53,23 @@ public enum EndPoints {
 
     DELETE_PROGRAM_BYPROGRAMID("/deletebyprogid/{programId}"),
 
-    DELETE_PROGRAM_BYPROGRAMNAME("/deletebyprogname/{programName}");
+    DELETE_PROGRAM_BYPROGRAMNAME("/deletebyprogname/{programName}"),
+
+		
+	//Batch end points
+	
+	 CREATE_NEWSKILL("/SaveSkillMaster"),
+     CREATE_NEWSKILLINVALID("/SaveSkillMaster/M"),
+     GETALL_SKILLMASTER("/allSkillMaster"),//valid
+     GETALL_SKILLMASTERINVALID("/allSkillMasterss"),//invalid
+     GETSKILL_BYSKILLMASTERNAME("/skills/{skillMasterName}"),//valid
+     GETSKILL_BYSKILLMASTERNAMEINVALID("/skills/{skillMasterName}/m"),//invalid
+     UPDATESKILL_BYSKILLID("/updateSkills/{SkillId}"),
+     UPDATESKILL_BYSKILLIDINVALID("/updateSkills/{SkillId}/n"),
+     DELETESKILL_BYSKILLID("/deletebySkillId/{skillId}"),
+     DELETESKILL_BYSKILLIDINVALID ("/deletebySkillId/{skillId}/M");
+	
+	
 
     private String endpoint;
     private static final String baseUrl = "https://lms-hackthon-feb25-803334c87fbe.herokuapp.com/lms";

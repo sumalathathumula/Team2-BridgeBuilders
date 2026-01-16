@@ -1,4 +1,4 @@
-#@admin-login 
+@admin-login 
 Feature: Admin Login Controller - Token Generation
   
   Background: 
