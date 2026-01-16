@@ -1,3 +1,4 @@
+
 package context;
 
 import java.util.*;
@@ -10,20 +11,17 @@ public class ScenarioContext {
 
     private RequestSpecification request;
     private Response response;
-
     private String token;
     private Map<String, String> rowData;
-
-    private List<Integer> programIds = new ArrayList<>();
-    private List<Integer> batchIds = new ArrayList<>();   
-    private List<String> programNames = new ArrayList<>();
-    private List<String> batchNames = new ArrayList<>();
-
+    private Map<String, Integer> programIds = new HashMap<>();
+    private Map<String, String> programNames = new HashMap<>();
+    private Map<String, Integer> batchIds = new HashMap<>();
+    private Map<String, String> batchNames = new HashMap<>();
 	private String userId;
 	private String role_id;
-	private String programId;
+	private String Program_id;
 	
-
+	
     private ScenarioContext() {}
 
     public static synchronized ScenarioContext getInstance() {
@@ -32,7 +30,7 @@ public class ScenarioContext {
         }
         return instance;
     }
-
+    
     //  REQUEST / RESPONSE 
 
     public void setRequest(RequestSpecification request) {
@@ -73,39 +71,43 @@ public class ScenarioContext {
 
     //PROGRAM 
 
-    public void addProgramId(int id) {
-        programIds.add(id);
+    public void addProgram(String key, int id, String name) {
+        programIds.put(key, id);
+        programNames.put(key, name);
     }
 
-    public int getProgramId(int index) {
-        return programIds.get(index);
+    public int getProgramId(String key) {
+        return programIds.get(key);
     }
 
-    public void addProgramName(String name) {
-        programNames.add(name);
-    }
-
-    public String getProgramName(int index) {
-        return programNames.get(index);
-    }
-
-    // BATCH
-
-    public void addBatchId(int id) {
-        batchIds.add(id);
-    }
-
-    public int getBatchId(int index) {
-        return batchIds.get(index);
-    }
-    public void addBatchName(String name) {
-        batchNames.add(name);
-    }
-    public String getBatchName(int index) {
-    	return batchNames.get(index);
+    public String getProgramName(String key) {
+        return programNames.get(key);
     }
     
+    public Integer getLatestProgramId() {
+        return programIds.values().iterator().next(); 
+    }
+    
+    public String getLatestProgramName() {
+    	return programNames.values().iterator().next();
+    			}
+    
 
+    // BATCH
+    
+    public void addBatch(String key, int id, String name) {
+        batchIds.put(key, id);
+        batchNames.put(key, name);
+    }
+
+    public int getBatchId(String key) {
+        return batchIds.get(key);
+    }
+
+    public String getBatchName(String key) {
+        return batchNames.get(key);
+    } 
+    
     public  void setUserId(String userId) {
     	this.userId = userId;
 		
@@ -113,22 +115,13 @@ public class ScenarioContext {
     public  void setRoleId(String role_id) {
     	this.role_id = role_id;
 	}
-    
-    public void setProgramId(String program_Id) {
-    	this.programId = program_Id;
-    }
     public String getUserId() {
         return userId;
     }
     public String getRoleId() {
         return role_id;
     }
-    
- 
    
-    
-    
-
     // CLEANUP 
 
     public void clear() {
@@ -136,7 +129,6 @@ public class ScenarioContext {
         response = null;
         token = null;
         rowData = null;
-
         programIds.clear();
         programNames.clear();
         batchIds.clear();        

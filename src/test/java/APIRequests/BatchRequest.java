@@ -84,8 +84,8 @@ public class BatchRequest {
         String batchName =
                 response.jsonPath().getString("batchName");
 
-        context.addBatchId(batchId);
-        context.addBatchName(batchName);
+        //context.addBatchId(batchId);
+        //context.addBatchName(batchName);
 
         LoggerLoad.info("batchId: " + batchId);
         LoggerLoad.info("batchName: " + batchName);

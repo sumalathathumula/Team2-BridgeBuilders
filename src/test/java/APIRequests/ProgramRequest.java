@@ -1,88 +1,74 @@
 package APIRequests;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import context.ScenarioContext;
 import endpoints.EndPoints;
 import io.restassured.response.Response;
 import models.Program;
-import models.User;
-import models.UserLogin;
-import models.UserRoleMap;
 import utilities.ConfigReader;
 import utilities.ExcelReader;
 import utilities.LoggerLoad;
 
 public class ProgramRequest {
-
+	
+	private String endpoint;
 	private final ScenarioContext context;
 	
 	public ProgramRequest() {
 		 this.context = ScenarioContext.getInstance();
 	}
 
-	private String endpoint;
-
 	public void CreateProgramRequest() {
 		endpoint = EndPoints.CREATE_PROGRAM.getEndpoint();
 	}
 
-	
-	private Program buildProgramFromExcelRow(Map<String, String> row) {
-
-		Program pgm = new Program();
-
-		pgm.setprogramDescription(row.get("programDescription"));
-		pgm.setprogramName(row.get("programName"));
-		pgm.setprogramStatus(row.get("programStatus"));
-
-    return pgm;
+	public void prepareProgramRequest() {
+        endpoint = EndPoints.CREATE_PROGRAM.getEndpoint();
     }
-	
+    
+    public void createProgramFromExcelRow(String scenarioName) throws InvalidFormatException, IOException {
 
-	public void CreateProgramfromExcel(String scenarioName) throws Exception {
-		List<Map<String, String>> programdata = ExcelReader.getData(ConfigReader.getProperty("excelPath"), "Program");
-		for (Map<String, String> row : programdata) {
-			String excelScenario = row.get("Scenario");
-			if (scenarioName.equalsIgnoreCase(excelScenario)) {
+       
+            List<Map<String, String>> programData =
+                    ExcelReader.getData(
+                            ConfigReader.getProperty("excelPath"),
+                            "Program"
+                    );
 
-				Program pgm = buildProgramFromExcelRow(row);
+            for (Map<String, String> row : programData) {
 
-				Response response = context.getRequest().body(pgm).when().post(endpoint);
+                if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
 
-				context.setResponse(response);
-				context.setRowData(row);;
+                    Program program = new Program();
+                    program.setprogramName(row.get("programName"));
+                    program.setprogramDescription(row.get("programDescription"));
+                    program.setprogramStatus(row.get("programStatus"));
 
-				LoggerLoad.info("Status Code: " + response.getStatusCode());
-				if (response.getStatusCode() != 401 && response.getStatusCode() != 404) {
-					LoggerLoad.info("Status Message: " + response.jsonPath().getString("message"));
+                    Response response = context.getRequest()
+                            .body(program)
+                            .post(endpoint);
 
-					if (response.getStatusCode() == 201) {
-						int programId = Integer.parseInt(response.jsonPath().getString("programId"));
-				        String programName = response.jsonPath().getString("programName");
+                    context.setResponse(response);
+                    context.setRowData(row);
 
-				        context.addBatchId(programId);
-				        context.addBatchName(programName);
-					}
-				}
-			}
-		}
-	}
-	
-	   private void saveProgramDetails(Response response) {
+                    LoggerLoad.info("Status Code: " + response.getStatusCode());
+                    if (response.getStatusCode() != 401 &&
+                        response.getStatusCode() != 404) {
+                        LoggerLoad.info("Status Message: " +
+                                response.jsonPath().getString("message"));
+                    }
+                    break;
+                }
+            }
 
-	        int programId = Integer.parseInt(response.jsonPath().getString("programId"));
-	        String programName = response.jsonPath().getString("programName");
-
-	        context.addBatchId(programId);
-	        context.addBatchName(programName);
-
-	        LoggerLoad.info("programId: " + programId);
-	        LoggerLoad.info("programName: " + programName);
-	    }
-	
+    }
 	public void getallprogram()
 	{
 		endpoint = EndPoints.GET_ALL_PROGRAMS.getEndpoint();
@@ -92,5 +78,143 @@ public class ProgramRequest {
 		endpoint = EndPoints.GET_ALL_PROGRAMS.getEndpoint()+ "3";
 	}
 	
+	public void updateprogrambyprogramid() {
+		endpoint = EndPoints.UPDATE_PROGRAM_BYPROGRAMID.getEndpoint();
+	}
 	
+	public void updateprogrambyprogramname() {
+		endpoint = EndPoints.UPDATE_PROGRAM_BYPROGRAMNAME.getEndpoint();
+	}
+	
+	private Map<String, Object> buildUpdateRequestBody(Map<String, String> row , String scenarioName) {
+
+	    Map<String, Object> body = new HashMap<>();
+
+	    String programName = row.get("programName");
+	    String programStatus = row.get("programStatus");
+	    String programDescription = row.get("programDescription");
+	    
+	    if (programName != null) {
+	    body.put("programName", programName.trim());
+	    }
+	    body.put("programStatus", programStatus.trim());
+	    body.put("programDescription",row.getOrDefault("programDescription", "Updated"));
+
+
+	    return body;
+	}
+
+	public void updateProgramIdFromExcelRow(String scenarioName) throws Exception {
+
+		    List<Map<String, String>> rows =
+		            ExcelReader.getData(ConfigReader.getProperty("excelPath"), "Program");
+
+		    for (Map<String, String> row : rows) {
+
+		        if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
+
+		            context.setRowData(row);
+
+		            Map<String, Object> payload = buildUpdateRequestBody(row,scenarioName);
+
+		            Integer programId;
+		           
+
+		            
+		            if (scenarioName.contains("InvalidProgramId")) {
+		                programId = 999999; // non-existing numeric ID
+		            } 
+		            // Valid Program ID
+		            else {
+		                programId = context.getProgramId("Valid request bodyFDPID");
+		               
+		            }
+
+		            Response response =
+		                    context.getRequest()
+		                            .pathParam("programId", programId) // correct param
+		                            .body(payload)
+		                            .log().body()
+		                            .put(endpoint);
+
+		            context.setResponse(response);
+
+		            LoggerLoad.info("Status Code: " + response.getStatusCode());
+		            LoggerLoad.info("Response Body: " + response.asPrettyString());
+
+		            break;
+
+	            
+	        }
+	    }
+	}
+	public void updateProgramNameFromExcelRow(String scenarioName) throws Exception {
+
+	    List<Map<String, String>> rows =
+	            ExcelReader.getData(ConfigReader.getProperty("excelPath"), "Program");
+
+	    for (Map<String, String> row : rows) {
+
+	        if (row.get("Scenario").equalsIgnoreCase(scenarioName)) {
+
+	            context.setRowData(row);
+
+	            Map<String, Object> payload = buildUpdateRequestBody(row,scenarioName);
+
+	            String programName;
+	           
+	            if (scenarioName.contains("InvalidProgramName")) {
+	                programName = "zyxcba"; 
+	            } 
+	          
+	            else {
+	                programName = context.getProgramName("Valid request bodyFDPN"); 
+  
+	            }
+
+	            Response response =
+	                    context.getRequest()
+	                            .pathParam("programName", programName) // correct param
+	                            .body(payload)
+	                            .log().body()
+	                            .put(endpoint);
+
+	            context.setResponse(response);
+
+	            LoggerLoad.info("Status Code: " + response.getStatusCode());
+	            LoggerLoad.info("Response Body: " + response.asPrettyString());
+
+	            break;
+
+            
+        }
+    }
+}
+	
+	public void deleteProgramById(String scenarioName) throws Exception {
+
+	    Integer programId;
+
+	   
+	    if (scenarioName.contains("InvalidProgramId")) {
+	        programId = 999999;
+	    }
+	    
+	    else {
+	        programId = context.getProgramId("Valid request bodyFDPID");
+	    }
+
+	    Response response =
+	            context.getRequest()
+	                    .pathParam("programId", programId)
+	                    .when()
+	                    .delete(endpoint);   
+
+	    context.setResponse(response);
+
+	    LoggerLoad.info("Deleted Program ID: " + programId);
+	    LoggerLoad.info("Status Code: " + response.getStatusCode());
+	    LoggerLoad.info("Response Body: " + response.asPrettyString());
+	}
+
 }

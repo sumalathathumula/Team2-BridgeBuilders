@@ -12,7 +12,9 @@ Then Admin receives status code with response body
 
 Examples:
 |Scenario					|
-|Valid request body			|
+|Valid request bodyFB		|
+|Valid request bodyFDPID	|
+|Valid request bodyFDPN		|
 |Invalid request body		|
 |Missing request body		|
 
@@ -40,79 +42,83 @@ Given Admin creates GET Request with  valid programId for the LMS API
 When Admin sends HTTPS Request with with valid endpoint
 Then Admin receives 200 with OK message 
 
-#Examples:
-#|programId		|	Auth  	|	Scenario			|	status code		|	status message		|
-
-#|Invalid		|	Valid	|	Valid Endpoint		|	404				|	Not Found			|
-#|Valid			|	Valid	|	Inavlid baseUR		|	404				|	Not Found			|
-#|Valid			|	Invalid	|	Valid Endpoint		| 	401				|	Unauthorized		|
-#|Valid			|	Valid	|	Invalid Endpoint	|	404				|	Not found			|
-
-#@GETALLPROGRAMWITHUSER
-#Scenario Outline:
-#Check if Admin able to retrieve all programs with different request conditions
-#Given Admin creates GET Request with "<Auth>" for API
-#When Admin sends Request with "<scenario>"
-#Then Admin receives "<status code>" with "<status message>" 
-
-#Examples:
-#|Auth	|	scenario		|	status code		| status message	|
-#|Valid	|	Valid Endpoint	|	200				| OK				|
-#|Valid	|	Invalid Endpoint|	404				| Not Found			|
-#|Valid	|	Invalid Method	|	405				| Method Not Allowed|
-#|Invalid|	Valid Endpoint	|	401				| Unauthorized		|
-
-#@UPDATEPROGRAMBYPROGRAMID
-#Scenario Outline:
-#Check if Admin able to update a program with different request body conditions
-#Given Admin updates PUT Request with "<Auth>" 
-#When Admin sends HTTPS "<RequestBody>" with "<Endpoint>"
-#Then Admin receives "<status code>" with "<status message>"
-
-#Examples:
-#|Auth	|	RequestBody		|	Endpoint		|	status code		| status message	|
-#|Valid	|	Valid 			|	Valid Endpoint	|	200				| OK				|
-#|Valid	|	InValid			|	Invalid Endpoint|	400				| Bad Request		|
-#|Valid	|	Valid			|	Invalid Endpoint|	404				| Not Found			|
-#|Valid	|	Valid			|	Invalid Method	|	405				| Method Not Allowed|
-#|Invalid|	Valid			|	Valid Endpoint	|	401				| Unauthorized		|
+@GETPROGRAMBYPROGRAMID1
+Scenario:
+Check if Admin able to retrieve all programs by programId for invalid endpoint
+Given Admin creates GET Request with  Invalid programId for the LMS API
+When Admin sends HTTPS Request with with Invalid endpoint 
+Then Admin receives 404 with Not found message
 
 
-#@UPDATEPROGRAMBYPROGRAMNAME
-#Scenario Outline:
-#Check if Admin able to update a program with different request body conditions
-#Given Admin updates PUT Request with "<Auth>" 
-#When Admin sends HTTPS "<RequestBody>" with "<Endpoint>"
-#Then Admin receives "<status code>" with "<status message>"
+@GETALLPROGRAMWITHUSER
+Scenario:
+Check if Admin able to retrieve all programs with valid Endpoint
+Given Admin creates GET Request to get all programs with user details
+When Admin sends Request with valid endpoint
+Then Admin receives 200 OK with response body  
 
-#Examples:
-#|Auth	|	RequestBody		|	Endpoint		|	status code		| status message	|
-#|Valid	|	Valid 			|	Valid Endpoint	|	200				| OK				|
-#|Valid	|	InValid			|	Invalid Endpoint|	400				| Bad Request		|
-#|Valid	|	InValid			|	valid Endpoint	|	404				| Not Found			|
-#|Invalid|	Valid			|	Valid Endpoint	|	401				| Unauthorized		|
+@GETALLPROGRAMWITHUSER1
+Scenario:
+Check if Admin able to retrieve all programs with Invalid Endpoint
+Given Admin creates GET Request to get all program user details
+When Admin sends Request with Invalid endpoint
+Then Admin receives 404 with Not found message 
 
-#@DELETEPROGRAMBYPROGRAMID
-#Scenario Outline:
-#Check if Admin able to delete a program by program id with valid authorization
-#Given Admin creates DELETE Request with "<programID>"
-#When Admin sends HTTPS Request with endpoint
-#Then Admin receives "<statuscode"> with "<statusmessage>"
+@UPDATEPROGRAMBYPROGRAMID
+Scenario Outline:
+Check if Admin able to update a program with different request body conditions
+Given Admin updates PUT Request with valid Endpoint 
+When Admin sends HTTPS "<Scenario>" RequestBody 
+Then Admin receives status code and message 
 
-#Examples:
-#|programID		|	statuscode		|	statusmessage	|
-#|Valid			|	200				|	OK				|
-#|Invalid		|	404				|	Not found		|
+Examples:
+|Scenario			   |
+|ValidMandatoryField   |
+|MissingMandatoryField |
+|InvalidMandatoryField |
 
-#@DELETEPROGRAMBYPROGRAMNAME
-#Scenario Outline:
-#Check if Admin able to delete a program by program id with valid authorization
-#Given Admin creates DELETE Request with "<programName>"
-#When Admin sends HTTPS Request with endpoint
-#Then Admin receives "<statuscode"> with "<statusmessage>"
 
-#Examples:
-#|programName	|	statuscode		|	statusmessage	|
-#|Valid			|	200				|	OK				|
-#|Invalid		|	404				|	Not found		|
+
+@UPDATEPROGRAMBYPROGRAMNAME
+Scenario Outline:
+Check if Admin able to update a program by program name 
+Given Admin updates PUT Request for program by program name
+When Admin sends HTTPS "<Scenario>" RequestBody for update
+Then Admin receives status code with status message
+
+Examples:
+|Scenario		|
+|ValidRequest   |
+|MissingRequest |
+|InvalidRequest |
+
+
+@DELETEPROGRAMBYPROGRAMID
+Scenario Outline:
+Check if Admin able to delete a program by program id with valid authorization
+Given Admin creates DELETE Request with valid programID
+When Admin sends HTTPS "<delete>" Request with endpoint
+Then Admin receives 200 OK and validates the status
+
+@DELETEPROGRAMBYPROGRAMID1
+Scenario Outline:
+Check if Admin able to delete a program by program id with valid authorization
+Given Admin creates DELETE Request with valid programID
+When Admin sends HTTPS Request with endpoint
+Then Admin receives 404 Not Found message
+
+@DELETEPROGRAMBYPROGRAMNAME
+Scenario Outline:
+Check if Admin able to delete a program by program id with valid authorization
+Given Admin creates DELETE Request with Valid program name
+When Admin sends HTTPS Request with endpoint
+Then Admin receives 200 status code with OK message
+
+@DELETEPROGRAMBYPROGRAMNAME1
+Scenario Outline:
+Check if Admin able to delete a program by program id with valid authorization
+Given Admin creates DELETE Request with Invalid program name
+When Admin sends HTTPS Request with endpoint
+Then Admin receives 404 Not Found message for the request
+
 

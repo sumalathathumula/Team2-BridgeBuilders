@@ -29,21 +29,17 @@ public class BatchSteps {
 	
 	@Given("Admin sets Authorization to Bearer Token.")
 	public void admin_sets_authorization_to_bearer_token() {
-		//String token= context.getToken();
-		//endPoint = EndPoints.CREATE_BATCH.getEndpoint();
+		
 		batchRequest.prepareCreateBatchEndpoint();
 	}
 
 	@Given("Admin creates POST Request with valid data in request body for create batch")
 	public void admin_creates_post_request_with_valid_data_in_request_body_for_create_batch() {
-//		String token = context.getToken();
-//		endPoint = EndPoints.CREATE_BATCH.getEndpoint();		
-//		context.setRequest(given().spec(RequestSpecFactory.withAuth(token)));
 		 batchRequest.prepareRequestWithAuth();
 	}
 
 	@When("Admin sends HTTPS Request with data from row {string} for create batch")
-	public void admin_sends_https_request_with_data_from_row_for_create_batch(String scenarioName) throws InvalidFormatException, IOException {		
+	public void admin_sends_https_request_with_data_from_row_for_create_batch(String scenarioName) throws InvalidFormatException, IOException {	
 				
 		batchRequest.createBatchFromExcelRow(scenarioName);
 	   
@@ -67,16 +63,15 @@ public class BatchSteps {
 			int batchId = Integer.parseInt(response.jsonPath().getString("batchId"));
 			String batchName = response.jsonPath().getString("batchName");
 
-			context.addBatchId(batchId);
-			context.addBatchName(batchName);
+			context.addBatch("USER", batchId, batchName);
+			context.addBatch("DELETE_BY_BATCHID", batchId, batchName);
 			LoggerLoad.info("batchId :" + batchId);
 			LoggerLoad.info("batchName :" + batchName);
-			System.out.println("batchId for user:" +context.getBatchId(0));
-			System.out.println("batchName for user:" +context.getBatchName(0));
-			System.out.println("batchId for delete:" +context.getBatchId(1));
-			System.out.println("batchName for delete:" +context.getBatchName(1));
+			System.out.println("batchId for user:" +context.getBatchId("USER"));
+			System.out.println("batchName for user:" +context.getBatchName("USER"));
+			System.out.println("batchId for delete:" +context.getBatchId("DELETE_BY_BATCHID"));
+			System.out.println("batchName for delete:" +context.getBatchName("DELETE_BY_BATCHID"));			
 			
-		
 		}  
 	}
 
