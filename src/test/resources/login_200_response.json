@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Admin Login Response Schema",
+  "type": "object",
+  "required": [
+    "token",
+    "type",
+    "userId",
+    "email",
+    "roles",
+    "status",
+    "passwordExpired"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "description": "The JWT authentication token."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Bearer"],
+      "description": "The type of the token."
+    },
+    "userId": {
+      "type": "string",
+      "pattern": "^U[0-9]+$",
+      "description": "User ID starting with U followed by numbers."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "The email address of the authenticated user."
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "List of roles assigned to the user."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Active", "Inactive"],
+      "description": "Current account status."
+    },
+    "passwordExpired": {
+      "type": "boolean",
+      "description": "Indicator if the password needs to be changed."
+    }
+  }
+}

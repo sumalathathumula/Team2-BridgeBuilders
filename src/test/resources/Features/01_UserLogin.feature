@@ -127,3 +127,11 @@ Feature: Admin Authentication and Management
     And Admin creates request for logout
     When Admin calls "GET" method with "valid endpoint" for logout
     Then Admin receives 401 for logout
+
+  @schema-validation
+  Scenario Outline: Validate API response schema
+    When I make a "<method>" request to the "<endpoint>" API
+    Then the response body should match the "<schema>.json" schema
+    Examples:
+      | method | endpoint | schema             |
+      | POST   | LOGIN    | login_200_response |

@@ -30,4 +30,19 @@ public class AuthUtil {
 
         return res.jsonPath().getString("token");
     }
+
+    public static RequestSpecification buildLoginRequest(String email, String password, String uri) {
+        String reqBody = """
+                {
+                    "userLoginEmailId":"%s",
+                    "password":"%s"
+                }
+                """;
+
+        String body = String.format(reqBody, email, password);
+        return given()
+                .baseUri(uri)
+                .contentType(ContentType.JSON)
+                .body(body);
+    }
 }
