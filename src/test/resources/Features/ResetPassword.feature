@@ -1,14 +1,7 @@
-@user-login
+#@admin-management
 @reset-password-module
 Feature: Admin Reset Password Controller
   As an Admin, I want to manage password resets through the API.
-#
-#  @Reset-Success
-#  Scenario: Check if admin able to resetPassword
-#    Given Admin sets "valid" authorization for reset password
-#    And Admin creates reset password request with "valid" email and "new" password
-#    When Admin calls "POST" method with "valid" endpoint for reset password
-#    Then Admin receives 200 for reset password
 
   @Reset-Negative
   Scenario Outline: Check reset password with various invalid inputs or metadata
@@ -24,9 +17,24 @@ Feature: Admin Reset Password Controller
       | valid              | valid       | new            | POST   | invalid       | 404         |
       | valid              | valid       | new            | GET    | valid         | 405         |
       | valid              | invalid     | new            | POST   | valid         | 400         |
-#      | valid              | valid       | new            | POST   | valid         | 200         |   //>> DO NOT ENABLE
       | valid              | valid       | valid          | POST   | valid         | 200         |
 
+  @Reset-Negative-BaseURL
+  Scenario: Check reset password with invalid base URL
+    Given Admin sets "valid" authorization for reset password
+    And Admin creates reset password request with "valid" email and "new" password
+    When Admin calls Post Https method for reset password with invalid base URI
+    Then Admin receives 404 for reset password
 
-#      | authorization      | valid       | new            | POST   | invalid baseURL | 404         |
-#      | authorization      | valid       | invalid content type | POST   | valid endpoint   | 415         |
+  @Reset-Negative-ContentType
+  Scenario: Check reset password with invalid content type
+    Given Admin sets "valid" authorization for reset password
+    And Admin creates reset password request with "valid" email and "new" password
+    When Admin calls Post Https method for reset password with invalid content type
+    Then Admin receives 415 for reset password
+
+#      | valid              | valid       | new            | POST   | valid         | 200         |   //>> DO NOT ENABLE
+
+
+
+

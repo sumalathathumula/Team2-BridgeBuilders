@@ -6,6 +6,7 @@ public enum EndPoints {
     USER_SIGN_IN("/login"),
     USER_LOGOUT("/logoutlms"),
     USER_PASSWORD_RESET("/resetPassword"),
+    USER_FORGOT_PASSWORD("/login/forgotpassword/confirmEmail"),
 
     //Invalid Endpoint
     INVALID("/invalid"),

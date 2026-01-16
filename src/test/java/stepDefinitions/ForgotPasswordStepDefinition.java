@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import static endpoints.EndPoints.USER_FORGOT_PASSWORD;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -56,7 +57,7 @@ public class ForgotPasswordStepDefinition {
 
     @When("Admin calls Post Https method for forgot-password with valid endpoint")
     public void admin_calls_post_https_method_for_forgot_password_with_valid_endpoint() {
-        context.setResponse(context.getRequest().post("/login/forgotpassword/confirmEmail"));
+        context.setResponse(context.getRequest().post(USER_FORGOT_PASSWORD.getEndpoint()));
     }
 
     @Then("Admin receives {int} for forgot-password")
@@ -97,7 +98,7 @@ public class ForgotPasswordStepDefinition {
 
     @When("Admin calls Post Https method for forgot-password with invalid content type")
     public void admin_calls_post_https_method_for_forgot_password_with_invalid_content_type() {
-        context.setResponse(context.getRequest().contentType(ContentType.XML).post("/login/forgotpassword/confirmEmail"));
+        context.setResponse(context.getRequest().contentType(ContentType.XML).post(USER_FORGOT_PASSWORD.getEndpoint()));
     }
 
 }

@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import static endpoints.EndPoints.INVALID;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -119,24 +120,41 @@ public class LoginStepDefinition {
         context.setResponse(context.getRequest().contentType(ContentType.XML).post("/login"));
     }
 
-    @When("Admin calls Post Https method with invalid base URL")
-    public void admin_calls_post_https_method_with_invalid_base_url() {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
-        // TODO
+
+    @When("Admin calls Post Https method with invalid base URI")
+    public void admin_calls_post_https_method_with_invalid_base_uri() {
+        RequestSpecification req = context.getRequest();
+
+        // We use the REAL host but add a 'bad' segment to the URI
+        // This triggers a server response instead of a network crash
+        String invalidBase = "https://lms-hackathon-nov-2025-8dd40899c026.herokuapp.com/!!invalid!!";
+
+        req.baseUri(invalidBase);
+
+        // Execute the request
+        var res = req.when().post("/login");
+
+        // Save response - now res.getStatusCode() will be 400 or 404 instead of throwing an Exception
+        context.setResponse(res);
     }
 
     @When("Admin calls Post Https method with invalid endpoint")
     public void admin_calls_post_https_method_with_invalid_endpoint() {
+        // 1. Retrieve the request from context
+        RequestSpecification req = context.getRequest();
+
+        // 2. Use the path defined in your Enum: EndPoints.INVALID.getEndpoint()
+        String invalidPath = INVALID.getEndpoint();
+
+        // 3. Execute the POST request
+        var res = req.when().post(invalidPath);
+
+        // 4. Save response to context for assertion
+        context.setResponse(res);
+
+        log.info("Request sent to invalid endpoint: {}", invalidPath);
     }
 
-    // --- THEN STEPS (Regex Optimized) ---
-
-    /**
-     * Matches "Admin receives 200", "Admin receives 404 for invalid URL",
-     * or "Admin receives 201 created with token"
-     * Uses non-capturing group (?:.*) to ignore the descriptive text.
-     */
     @Then("Admin receives {int} for Login")
     public void admin_receives_status(int http_status) {
         log.info("Received HTTP status {}", context.getResponse().getStatusCode());

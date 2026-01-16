@@ -1,23 +1,22 @@
-@user-login
-#@admin-management
-Feature: Admin Authentication and Session Management
-  As an Admin, I want to manage my login, password settings, and logout sessions through the API.
+@admin-management
+Feature: Admin Authentication and Management
+  As an Admin, I want to manage my login, password resets, and logout sessions through the API.
 
-  Background:
-    Given Admin sets No Auth
-
-  # --- SECTION 1: LOGIN & TOKEN GENERATION ---
-  # @admin-auth-module
+  # ====================================================================================
+  # SECTION 1: LOGIN & TOKEN GENERATION
+  # ====================================================================================
 
   @Login-Success
   Scenario: Check if admin able to generate token with valid credential
-    Given Admin creates request with valid credentials
+    Given Admin sets No Auth
+    And Admin creates request with valid credentials
     When Admin calls Post Https method with valid endpoint
     Then Admin receives 200 created with auto generated token
 
   @Login-Invalid
   Scenario Outline: Check admin login with various invalid inputs or protocols
-    Given Admin creates request with <condition>
+    Given Admin sets No Auth
+    And Admin creates request with <condition>
     When Admin calls <method> with <endpoint_type>
     Then Admin receives <status_code> for Login
 
@@ -35,18 +34,21 @@ Feature: Admin Authentication and Session Management
       | valid credentials                 | Post Https method | invalid base URI     | 404         |
       | valid credentials                 | Post Https method | invalid endpoint     | 401         |
 
-
-  # --- SECTION 2: FORGOT PASSWORD ---
+  # ====================================================================================
+  # SECTION 2: FORGOT PASSWORD
+  # ====================================================================================
 
   @Forgot-Password-Success
   Scenario: Check if admin able to generate token with valid credential for forgot-password
-    Given Admin creates request for forgot-password with valid credentials
+    Given Admin sets No Auth
+    And Admin creates request for forgot-password with valid credentials
     When Admin calls Post Https method for forgot-password with valid endpoint
     Then Admin receives 201 created with auto generated token for forgot-password
 
   @Forgot-Password-Invalid
   Scenario Outline: Check forgot-password with invalid inputs or metadata
-    Given Admin creates request for forgot-password with <condition>
+    Given Admin sets No Auth
+    And Admin creates request for forgot-password with <condition>
     When Admin calls Post Https method for forgot-password with <endpoint_type>
     Then Admin receives <status_code> for forgot-password
 
@@ -58,7 +60,44 @@ Feature: Admin Authentication and Session Management
       | valid credentials                 | invalid content type | 415         |
       | valid credentials                 | invalid endpoint     | 404         |
 
-  # --- SECTION 3: LOGOUT ---
+  # ====================================================================================
+  # SECTION 3: RESET PASSWORD
+  # ====================================================================================
+  # @reset-password-module
+
+  @Reset-Negative
+  Scenario Outline: Check reset password with various invalid inputs or metadata
+    Given Admin sets "<authorization_type>" authorization for reset password
+    And Admin creates reset password request with "<email_state>" email and "<password_state>" password
+    When Admin calls "<method>" method with "<endpoint_type>" endpoint for reset password
+    Then Admin receives <status_code> for reset password
+
+    Examples:
+      | authorization_type | email_state | password_state | method | endpoint_type | status_code |
+      | no                 | valid       | old            | POST   | valid         | 401         |
+      | valid              | new         | special_char   | POST   | valid         | 400         |
+      | valid              | valid       | new            | POST   | invalid       | 404         |
+      | valid              | valid       | new            | GET    | valid         | 405         |
+      | valid              | invalid     | new            | POST   | valid         | 400         |
+      | valid              | valid       | valid          | POST   | valid         | 200         |
+
+  @Reset-Negative-BaseURL
+  Scenario: Check reset password with invalid base URL
+    Given Admin sets "valid" authorization for reset password
+    And Admin creates reset password request with "valid" email and "new" password
+    When Admin calls Post Https method for reset password with invalid base URI
+    Then Admin receives 404 for reset password
+
+  @Reset-Negative-ContentType
+  Scenario: Check reset password with invalid content type
+    Given Admin sets "valid" authorization for reset password
+    And Admin creates reset password request with "valid" email and "new" password
+    When Admin calls Post Https method for reset password with invalid content type
+    Then Admin receives 415 for reset password
+
+  # ====================================================================================
+  # SECTION 4: LOGOUT
+  # ====================================================================================
   # @admin-logout-module
 
   @Logout-Scenarios
