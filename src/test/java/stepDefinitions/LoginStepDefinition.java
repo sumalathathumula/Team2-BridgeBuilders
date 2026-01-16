@@ -51,77 +51,77 @@ public class LoginStepDefinition {
 
     // --- GIVEN STEPS ---
 
-    @Given("Admin creates request with valid credentials")
-    public void admin_creates_request_with_valid_credentials() {
+    @Given("Admin creates request with valid credentials for login")
+    public void admin_creates_request_with_valid_credentials_for_user_mgmt() {
         buildRequest("team2@gmail.com", "ApiHackathon2@2", BASE_URI);
     }
 
-    @Given("Admin creates request with invalid admin email")
+    @Given("Admin creates request with invalid admin email for login")
     public void admin_creates_request_with_invalid_email() {
         buildRequest("team2@gmail.com", "ApiHackathon2@2", BASE_URI);
     }
 
-    @Given("Admin creates request with special characters in admin email")
+    @Given("Admin creates request with special characters in admin email for login")
     public void admin_creates_request_with_special_characters_in_admin_email() {
         buildRequest("@@@team2@gmail.com", "ApiHackathon2@2", BASE_URI);
     }
 
-    @Given("Admin creates request with special characters in password")
+    @Given("Admin creates request with special characters in password for login")
     public void admin_creates_request_with_special_characters_in_password() {
         buildRequest("team2@gmail.com", "ApiHackathon2@2!@#$", BASE_URI);
     }
 
-    @Given("Admin creates request with numbers in email")
+    @Given("Admin creates request with numbers in email for login")
     public void admin_creates_request_with_numbers_in_email() {
         buildRequest("12345@gmail.com", "ApiHackathon2@2", BASE_URI);
     }
 
-    @Given("Admin creates request with numbers in password")
+    @Given("Admin creates request with numbers in password for login")
     public void admin_creates_request_with_numbers_in_password() {
         buildRequest("team2@gmail.com", "12345678", BASE_URI);
     }
 
-    @Given("Admin creates request with Null password")
+    @Given("Admin creates request with Null password for login")
     public void admin_creates_request_with_null_password() {
         // Omitting password field via logic or manual string
         context.setRequest(given().baseUri(BASE_URI).contentType(ContentType.JSON).body("{\"userLoginEmailId\":\"team2@gmail.com\"}"));
     }
 
-    @Given("Admin creates request with Null email")
+    @Given("Admin creates request with Null email for login")
     public void admin_creates_request_with_null_email() {
         context.setRequest(given().baseUri(BASE_URI).contentType(ContentType.JSON).body("{\"password\":\"ApiHackathon2@2\"}"));
     }
 
-    @Given("Admin creates request with Null body")
+    @Given("Admin creates request with Null body for login")
     public void admin_creates_request_with_null_body() {
         buildRequest(null, null, BASE_URI);
     }
 
     // --- WHEN STEPS ---
 
-    @When("Admin calls Post Https method with valid endpoint")
+    @When("Admin calls Post Https method with valid endpoint for login")
     public void admin_calls_post_https_method_with_valid_endpoint() {
         context.setResponse(context.getRequest().post("/login"));
     }
 
-    @When("Admin calls GET HTTPS method with post endpoint")
+    @When("Admin calls GET HTTPS method with post endpoint for login")
     public void admin_call_get_https_method_with_post_endpoint() {
         context.setResponse(context.getRequest().get("/login"));
     }
 
-    @When("Admin calls Post Https method with {string}")
+    @When("Admin calls Post Https method with {string} for login")
     public void admin_calls_post_with_path(String path) {
         // Generic approach for invalid endpoints
         context.setResponse(context.getRequest().post(path));
     }
 
-    @When("Admin calls Post Https method with invalid content type")
+    @When("Admin calls Post Https method with invalid content type for login")
     public void admin_calls_post_https_method_with_invalid_content_type() {
         context.setResponse(context.getRequest().contentType(ContentType.XML).post("/login"));
     }
 
 
-    @When("Admin calls Post Https method with invalid base URI")
+    @When("Admin calls Post Https method with invalid base URI for login")
     public void admin_calls_post_https_method_with_invalid_base_uri() {
         RequestSpecification req = context.getRequest();
 
@@ -138,7 +138,7 @@ public class LoginStepDefinition {
         context.setResponse(res);
     }
 
-    @When("Admin calls Post Https method with invalid endpoint")
+    @When("Admin calls Post Https method with invalid endpoint for login")
     public void admin_calls_post_https_method_with_invalid_endpoint() {
         // 1. Retrieve the request from context
         RequestSpecification req = context.getRequest();
@@ -161,8 +161,8 @@ public class LoginStepDefinition {
         assertThat(context.getResponse().getStatusCode()).isEqualTo(http_status);
     }
 
-    @Then("Admin receives {int} created with auto generated token")
-    public void admin_receives_created_with_auto_generated_token(Integer http_status) {
+    @Then("Admin receives {int} created with auto generated token for login")
+    public void admin_receives_created_with_auto_generated_token_for_user_mgmt(Integer http_status) {
         log.info("Received HTTP status {}", context.getResponse().getStatusCode());
 
         assertThat(context.getResponse().getStatusCode()).isEqualTo(http_status);

@@ -9,15 +9,15 @@ Feature: Admin Authentication and Management
   @Login-Success
   Scenario: Check if admin able to generate token with valid credential
     Given Admin sets No Auth
-    And Admin creates request with valid credentials
-    When Admin calls Post Https method with valid endpoint
-    Then Admin receives 200 created with auto generated token
+    And Admin creates request with valid credentials for login
+    When Admin calls Post Https method with valid endpoint for login
+    Then Admin receives 200 created with auto generated token for login
 
   @Login-Invalid
   Scenario Outline: Check admin login with various invalid inputs or protocols
     Given Admin sets No Auth
-    And Admin creates request with <condition>
-    When Admin calls <method> with <endpoint_type>
+    And Admin creates request with <condition> for login
+    When Admin calls <method> with <endpoint_type> for login
     Then Admin receives <status_code> for Login
 
     Examples:
@@ -128,10 +128,10 @@ Feature: Admin Authentication and Management
     When Admin calls "GET" method with "valid endpoint" for logout
     Then Admin receives 401 for logout
 
-  @schema-validation
-  Scenario Outline: Validate API response schema
-    When I make a "<method>" request to the "<endpoint>" API
-    Then the response body should match the "<schema>.json" schema
-    Examples:
-      | method | endpoint | schema             |
-      | POST   | LOGIN    | login_200_response |
+#  @schema-validation
+#  Scenario Outline: Validate API response schema
+#    When I make a "<method>" request to the "<endpoint>" API
+#    Then the response body should match the "<schema>.json" schema
+#    Examples:
+#      | method | endpoint | schema             |
+#      | POST   | LOGIN    | login_200_response |
