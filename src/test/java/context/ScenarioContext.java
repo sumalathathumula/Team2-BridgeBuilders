@@ -163,6 +163,7 @@ import io.restassured.specification.RequestSpecification;
             programIds.clear();
             programNames.clear();
             batchIds.clear();
+            skillIds.clear();
         }
     }
 
