@@ -67,9 +67,13 @@ public enum EndPoints {
      UPDATESKILL_BYSKILLID("/updateSkills/{SkillId}"),
      UPDATESKILL_BYSKILLIDINVALID("/updateSkills/{SkillId}/n"),
      DELETESKILL_BYSKILLID("/deletebySkillId/{skillId}"),
-     DELETESKILL_BYSKILLIDINVALID ("/deletebySkillId/{skillId}/M");
+     DELETESKILL_BYSKILLIDINVALID ("/deletebySkillId/{skillId}/M"),
 	
-	
+	GET_BATCHES("/batches"),
+    INVALID_BATCH_ENDPOINT("/batchess"),
+    GET_BATCH_BY_NAME("/batches/batchName/"),
+    GET_BATCH_BY_ID("/batches/batchId/"),
+    GET_BATCH_BY_PROGRAMID("/batches/program/{programId}");
 
     private String endpoint;
     private static final String baseUrl = "https://lms-hackthon-feb25-803334c87fbe.herokuapp.com/lms";
