@@ -22,10 +22,13 @@ import io.restassured.specification.RequestSpecification;
         private List<String> skillNames = new ArrayList<>();
         private List<Integer> skillIds = new ArrayList<>();
 
+
         private String userId;
         private String role_id;
         private String programId;
-        private String skillId;
+        private String currentSkillId;
+        private String currentSkillName;
+
 
 
         private ScenarioContext() {}
@@ -108,20 +111,40 @@ import io.restassured.specification.RequestSpecification;
         public String getBatchName(int index) {
             return batchNames.get(index);
         }
- //SKILLMASTER
 
-         public void addSkillId(int id) {
+
+        // SKILL ID
+        public void addSkillId(int id) {
             skillIds.add(id);
-         }
-         public int getSkillId(int index) {
+        }
+
+        public int getSkillId(int index) {
             return skillIds.get(index);
-         }
+        }
+
+        public void setCurrentSkillId(String skillId) {
+            this.currentSkillId = skillId;
+        }
+
+        public String getCurrentSkillId() {
+            return currentSkillId;
+        }
         public void addSkillName(String name) {
             skillNames.add(name);
         }
+
         public String getSkillName(int index) {
             return skillNames.get(index);
         }
+
+        public void setCurrentSkillName(String name) {
+            this.currentSkillName = name;
+        }
+
+        public String getCurrentSkillName() {
+            return currentSkillName;
+        }
+
 
         public  void setUserId(String userId) {
             this.userId = userId;
@@ -135,8 +158,9 @@ import io.restassured.specification.RequestSpecification;
             this.programId = program_Id;
         }
         public void setSkillId(String skill_Id) {
-            this.skillId = skill_Id;
+            this.currentSkillId= skill_Id;
         }
+
         public String getUserId() {
             return userId;
         }
@@ -144,9 +168,11 @@ import io.restassured.specification.RequestSpecification;
             return role_id;
         }
         public String getSkillId() {
-            return skillId;
+            return currentSkillId;
         }
-
+            public String getSkillName() {
+            return currentSkillName;
+            }
 
 
 
@@ -164,6 +190,9 @@ import io.restassured.specification.RequestSpecification;
             programNames.clear();
             batchIds.clear();
             skillIds.clear();
+            skillNames.clear();
+            currentSkillId = null;
+            currentSkillName = null;
         }
     }
 

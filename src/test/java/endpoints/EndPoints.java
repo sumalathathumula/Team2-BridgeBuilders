@@ -6,12 +6,16 @@ public enum EndPoints {
 		USER_SIGN_IN("/login"),
 		//user end points
 		CREATE_USER("/users/roleStatus"),
+    GET_ALL_USERS("/users"),
+    GET_USER_INFORMATION_BY_USERID("/users/{userId}"),
+    GETS_USERS_BY_ROLEID("/users/roles/{roleId}"),
+        CREATE_BATCH("/batches"),
         CREATE_NEWSKILL("/SaveSkillMaster"),
         CREATE_NEWSKILLINVALID("/SaveSkillMaster/M"),
         GETALL_SKILLMASTER("/allSkillMaster"),//valid
         GETALL_SKILLMASTERINVALID("/allSkillMasterss"),//invalid
-        GETSKILL_BYSKILLNAME("/skills/{skillMasterName}"),//valid
-        GETSKILL_BYSKILLNAMEINVALID("/skills/{skillMasterName}/m"),//invalid
+        GETSKILL_BYSKILLMASTERNAME("/skills/{skillMasterName}"),//valid
+        GETSKILL_BYSKILLMASTERNAMEINVALID("/skills/{skillMasterName}/m"),//invalid
         UPDATESKILL_BYSKILLID("/updateSkills/{SkillId}"),
         UPDATESKILL_BYSKILLIDINVALID("/updateSkills/{SkillId}/n"),
         DELETESKILL_BYSKILLID("/deletebySkillId/{skillId}"),
